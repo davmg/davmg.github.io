@@ -1,0 +1,262 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DAVID</title>
+	<meta name="description" content="Hello, I am an interactive media designer from Cali, Colombia">
+	<meta name="author" content="David Martínez Gordillo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- Twitter Card data -->
+		<meta name="twitter:card" value="summary">
+	<!-- Open Graph data -->
+	<meta property="og:title" content="DAVID" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://200.3.193.93:81/~A00028324/MartinezDavid_Portafolio/" />
+	<meta property="og:image" content="http://200.3.193.93:81/~A00028324/MartinezDavid_Portafolio/data/marca2.png" />
+	<meta property="og:description" content="Hello, I am an interactive media designer from Cali, Colombia" />
+
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	
+	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	<script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+
+	<script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<!-- this line removes any default padding and style. you might only need one of these values set. -->
+	<style> body {padding: 0; margin: 0;} </style>
+
+	<!--Fuentes-->
+	<link href="https://fonts.googleapis.com/css?family=Glegoo|Roboto" rel="stylesheet">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/ico" href="imgs/icn-david.png"/>
+
+	<script language="javascript">
+	function scrollFunction() {
+		var scrollPos = document.body.scrollTop;
+		var height = window.innerHeight;
+		if (scrollPos >= height) {
+			document.getElementById("menu").style.position = "fixed";
+			document.getElementById("menu").style.top = "0px";
+			document.getElementById("icn-menu-sm").style.position = "fixed";
+			document.getElementById("icn-menu-sm").style.top = "30px";
+			document.getElementById("icn-menu-sm").style.left = "30px";
+		} else {
+			document.getElementById("menu").style.position = "absolute";
+			document.getElementById("menu").style.top = "100vh";
+			document.getElementById("icn-menu-sm").style.position = "absolute";
+			document.getElementById("icn-menu-sm").style.top = (height+30)+"px";
+		}
+	}
+	
+	window.onscroll = scrollFunction;
+	</script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('.container').fadeIn(300);
+		$('.canvas-container').fadeIn(300);
+
+		var height = window.innerHeight;
+		for (i = 0; i < $("nav.li").length; i++) { 
+			if (scrollPos >= height*(i+1) && scrollPos < height*(i+2)) {
+				$("nav.li")[i].addClass("subrayado");
+			}
+		}
+
+		$("#ab1").hover(function(){
+			$("#abt1").toggleClass("colblack");
+		});
+		$("#ab2").hover(function(){
+			$("#abt2").toggleClass("colblack");
+		});
+		$("#ab3").hover(function(){
+			$("#abt3").toggleClass("colblack");
+		});
+		$("#ab4").hover(function(){
+			$("#abt4").toggleClass("colblack");
+		});
+
+		$("#icn-menu-sm").click(function(){
+			$("#menu").toggleClass("hidden-xs");
+			$("#menu").toggleClass("hidden-sm");
+		});
+	});
+	</script>
+	<script type="text/javascript">
+	$(function(){
+		$('nav').find('a[href*=#]').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body').animate({scrollTop: targetOffset}, 800);
+					return false;
+				}
+			}
+		});
+		$('#work').find('a').click(function(e){
+			link_href = this.href;
+			$('#canvas-container').fadeOut(300);
+			$('.nav-element').fadeOut(300);
+			$('.container').fadeOut(300, function(){
+				window.location.href = link_href;
+			});
+			return false;
+		});
+	});
+	</script>
+</head>
+
+</head>
+<body>
+	<div id="canvas-container"></div>
+	<nav id="menu" class="hidden-sm hidden-xs"><ul>
+		<li class="nav-element"><a href="#david">DAVID</a></li>
+		<li class="nav-element"><a href="#abilities">I CAN DO THIS</a></li>
+		<li class="nav-element"><a href="#work">I'VE DONE THIS</a></li>
+		<li class="nav-element"><a href="#contact">I AM HERE</a></li>
+	</ul></nav>
+	<img id="icn-menu-sm" src="imgs/btn-menu.png" class="visible-sm visible-xs">
+	<div class="container">
+		<div id="david" class="row">
+			<div id="david-info" class="col-lg-4 col-md-4 col-sm-5 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-2 ">
+				<h1>david martínez gordillo</h1>
+				<p>I’m a last-year Interactive Media Design student interested in Experience and Interface design, Prototyping and Creative coding.
+				<br><br>I also like maths, origami, watching tv, learning new languages and I don’t speak a lot, so I will show what I do.</p>
+			</div>
+			<div class="img-container">
+				<img src="imgs/foto-david.png" alt="This is David" class="img-responsive col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-6">
+			</div>
+		</div><!--end of about-->
+		<div id="abilities" class="row">
+			<div class="row linea-formas"><!--first line of shapes-->
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-2">
+					<img id="ab1" class="figura-ab" src="imgs/rom_neg.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/hex_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/cruz_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/tri_gris.png">
+				</div>
+			</div><!--end of first-->
+			<div class="row">
+				<h1 id="abt1" class="text-abilities col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-2">user experience</h1>
+			</div>
+			<div class="row linea-formas"><!--second line of shapes-->
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-4   hidden-xs">
+					<img class="figura" src="imgs/tri_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/rom_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1  hidden-xs">
+					<img class="figura" src="imgs/hex_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2">
+					<img id="ab2" class="figura-ab" src="imgs/cruz_neg.png">
+				</div>
+			</div><!--end of second-->
+			<div class="row">
+				<h1 id="abt2" class="text-abilities col-lg-1 col-md-1 col-sm-4 col-xs-1 col-lg-offset-10 col-md-offset-10 col-sm-offset-9 col-xs-offset-2">interface design</h1>
+			</div>
+			<div class="row linea-formas"><!--third line of shapes-->
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-2">
+					<img id="ab3" class="figura-ab" src="imgs/hex_neg.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/cruz_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/tri_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/rom_gris.png">
+				</div>
+			</div><!--end of third-->
+			<div class="row">
+				<h1 id="abt3" class="text-abilities col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-2">prototyping</h1>
+			</div>
+			<div class="row linea-formas"><!--fourth line of shapes-->
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-4   hidden-xs">
+					<img class="figura" src="imgs/cruz_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/hex_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1   hidden-xs">
+					<img class="figura" src="imgs/rom_gris.png">
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2">
+					<img id="ab4" class="figura-ab" src="imgs/tri_neg.png">
+				</div>
+			</div><!--end of fourth-->
+			<div class="row">
+				<h1 id="abt4" class="text-abilities col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-10 col-md-offset-10 col-sm-offset-9 col-xs-offset-2">creative coding</h1>
+			</div>
+		</div><!--end of abilities-->
+		<div id="work" class="row">
+			<a href="projects.html#proj1" class="project-card col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-offset-3 col-md-offset-3 ">
+				<img src="imgs/tmb-pdg.png" class="img-responsive">
+				<div class="prj-card-text card-top">
+					<h2>Domu</h2>
+					<h3>Pediatric hospitalization experience</h3>
+				</div>
+			</a>
+			<a href="projects.html#proj2" class="project-card col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<img src="imgs/tmb-mon.png" class="img-responsive">
+				<div class="prj-card-text card-top">
+					<h2>Money Sensei</h2>
+					<h3>Personal finances advisor</h3>
+				</div>
+			</a>
+			<a href="projects.html#proj3" class="project-card col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<img src="imgs/tmb-hed.png" class="img-responsive">
+				<div class="prj-card-text card-top">
+					<h2>Hoy es Diseño</h2>
+					<h3>Design event</h3>
+				</div>
+			</a>
+			<a href="projects.html#proj4" class="project-card col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-offset-3 col-md-offset-3">
+				<img src="imgs/tmb-sen.png" class="img-responsive">
+				<div class="prj-card-text card-bottom">
+					<h2>Sensturo</h2>
+					<h3>Artistic installation</h3>
+				</div>
+			</a>
+			<a href="projects.html#proj5" class="project-card col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<img src="imgs/tmb-leg.png" class="img-responsive">
+				<div class="prj-card-text card-bottom">
+					<h2>Legalapp</h2>
+					<h3>Law students assistant</h3>
+				</div>
+			</a>
+		</div><!--end of work-->
+		<div id="contact" class="row">
+			<img src="imgs/mapa.jpg" class="img-responsive col-lg-4 col-md-4 col-sm-7 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-xs-offset-3">
+			<div id="contact-info" class="col-lg-4 col-md-4 col-sm-6 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-2 col-xs-offset-1">
+				<h1>I am here</h1>
+				<p>You can find me in Cali, Colombia. Also you may look up on these:</p>
+				<ul>
+					<li><img src="imgs/icn-behance.png"><a target="_blank" href="https://www.behance.net/DavidMartinezG"><br><strong> www.behance.net/DavidMartinezG</strong></a></li>
+					<li><img src="imgs/icn-linkedin.png"><a target="_blank" href="https://www.linkedin.com/in/dmartinezgordillo"><br><strong>www.linkedin.com/in/dmartinezgordillo</strong></a></li>
+					<li><img src="imgs/icn-mail.png"><br><span>david12mg96@gmail.com</span></li>
+				</ul>
+			</div>
+		</div><!--end of contact-->
+	</div><!--end of container-->
+</body>
