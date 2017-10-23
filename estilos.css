@@ -157,15 +157,14 @@ p {
 }
 
 .figura-ab{
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
 	transition:.2s ease-out;
 }
 
 .figura-ab:hover{
-	transform: rotate(90deg) scale(0.7);
-	-webkit-transform: rotate(90deg) scale(0.7);
-	-moz-transform: rotate(90deg) scale(0.7);
-	-ms-transform: rotate(90deg) scale(0.7);
-
 	transition: .2s ease-out;
 }
 
@@ -173,14 +172,21 @@ p {
 	font-family: 'Glegoo', serif;
 	font-size: 24; 
 	text-align: center;
-	color : white;
+	color: #262626;
 	white-space: nowrap;
 	margin-bottom: 50px;
+	margin-left: -50px;
 	transition: .5s ease-out;
 }
 
 .colblack{
 	color: #262626;
+}
+
+@media (max-width: 760px){
+	.text-abilities{
+		color:#262626;
+	}
 }
 
 #work{
