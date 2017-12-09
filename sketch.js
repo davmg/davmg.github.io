@@ -51,9 +51,9 @@ function draw() {
 			diam-=vv;
 		}
 	}
-		fill(230);
-		noStroke();
-		ellipse(width/2, yflecha-2,diam,diam);
+	fill(230);
+	noStroke();
+	ellipse(width/2, yflecha-2,diam,diam);
 	image(marca2, w/2, height/2, marca1.width/3, marca1.height/3);
 	image(flecha2, w/2, yflecha, flecha2.width/1.5, flecha2.height/1.5);
 	var t=0;
@@ -72,13 +72,7 @@ function draw() {
 
 function mousePressed(){
 	if(dist(mouseX,mouseY,width/2,height-45)<20){
-		var $target = $('#david');
-		$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-		if ($target.length) {
-			var targetOffset = $target.offset().top;
-			$('html,body').animate({scrollTop: targetOffset}, 800);
-			return false;
-		}
+		$('html,body').animate({scrollTop: height}, 800);
 	}
 }
 
