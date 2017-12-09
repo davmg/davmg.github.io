@@ -31,16 +31,16 @@ function draw() {
 	background(255);
 	if(subiendo){
 		yflecha-=vel;
-		if(yflecha<height-50){
+		if(yflecha<h-50){
 			subiendo=false;	
 		} 
 	}else{
 		yflecha+=vel;
-		if(yflecha>height-40){
+		if(yflecha>h-40){
 			subiendo=true;	
 		} 
 	}
-	if(dist(mouseX,mouseY,width/2,height-45)<20){
+	if(dist(mouseX,mouseY,width/2,h-45)<20){
 		if(diam<80){
 			var v = map(diam, 0, 80, 50, 0);
 			diam+=v;
@@ -85,6 +85,8 @@ function mousePressed(){
 function windowResized() {
 	w = window.innerWidth;
 	h = window.innerHeight;  
+	yflecha=h-40;
+	subiendo=true;
 	resizeCanvas(w,h);
 }
 
