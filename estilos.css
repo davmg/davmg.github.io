@@ -16,6 +16,7 @@
 
 body{
 	background-color: white;
+	overflow-x: hidden;
 }
 
 #canvas-container{
@@ -28,6 +29,7 @@ nav{
 	height: 100vh;
 	color: white;
 	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
 	font-size: 13px;
 	z-index: 2;
 	padding: 150px 15px;
@@ -115,8 +117,8 @@ nav ul{
 	color:  var(--negro);
 }
 #david h1{
-	font-family: 'Glegoo', serif;
-	font-size: 50;
+	font-family: 'Bree Serif', serif;
+	font-size: 55;
 	display: block;
 	line-height: 45px;
 }
@@ -152,7 +154,6 @@ p {
 #abilities{
 	height: 100vh;
 	position: relative;
-	padding-top: 20%;
 }
 
 @media (max-width: 1500px) and (orientation: portrait){
@@ -160,13 +161,16 @@ p {
 		padding-top: 50%;
 	}
 }
-
-@media (max-width: 1500px) and (orientation: landscape){
+@media (max-width: 760px) and (orientation: portrait){
 	#abilities{
 		padding-top: 10%;
 	}
 }
-
+@media (max-width: 1500px) and (orientation: landscape){
+	#abilities{
+		padding-top: 5%;
+	}
+}
 
 .linea-formas{
 	margin-bottom: 0px;
@@ -185,24 +189,20 @@ p {
 }
 
 .text-abilities{
-	font-family: 'Glegoo', serif;
+	font-family: 'Bree Serif', serif;
 	font-size: 24; 
-	text-align: center;
+	text-align: left;
 	color: var(--negro);
 	margin-bottom: 30px;
 	transition: .5s ease-out;
 }
 
 .subtext-abilities{
-	font-family: 'Glegoo', serif;
+	font-family: 'Bree Serif', serif;
 	font-size: 20; 
-	text-align: center;
+	text-align: left;
 	color:  var(--gris);
 	margin-bottom: 30px;
-}
-
-.colblack{
-	color:  var(--negro);
 }
 
 @media (max-width: 760px){
@@ -220,26 +220,21 @@ p {
 		height: 100vh;
 	}
 }
-
-
-@media (max-width: 360px) and (orientation: portrait){
-	#work{
-		padding-top: 0px;
-	}
-}
-
 @media (max-width: 1500px) and (orientation: portrait){
 	#work{
 		padding-top: 50%;
 	}
 }
-
-@media (max-width: 1500px) and (orientation: landscape){
+@media (max-width: 760px) and (orientation: portrait){
 	#work{
-		padding-top: 0px;
+		padding-top: 0%;
 	}
 }
-
+@media (max-width: 1500px) and (orientation: landscape){
+	#work{
+		padding-top: 0%;
+	}
+}
 
 .project-card{
 	margin-top: 30px;
@@ -264,15 +259,21 @@ p {
 .prj-card-text{
 	z-index: 2;
 	position: absolute;
-	width: 80%;
-	background-color:  var(--negro);
+	width: 100%;
+	background-color:  rgba(255,255,255,0.8);
 	padding: 8px;
-	color: white;
+	color: var(--negro);
+}
+
+@media (max-width: 760px) and (orientation: portrait){
+	.prj-card-text{
+		width: 80%;
+	}
 }
 
 .project-card h2{
 	font-size: 24px;
-	font-family: 'Glegoo', serif;
+	font-family: 'Bree Serif', serif;
 	margin: 0px;
 }
 
@@ -283,12 +284,12 @@ p {
 }
 
 .card-top{
-	top: 25%;
+	top: 20%;
 	left: 10%;
 }
 
 .card-bottom{
-	bottom: 25%;
+	bottom: 20%;
 	left: 10%;
 }
 
@@ -316,7 +317,7 @@ p {
 }
 
 #contact h1{
-	font-family: 'Glegoo', serif;
+	font-family: 'Bree Serif', serif;
 	font-size: 50;
 	display: block;
 	line-height: 45px;
@@ -401,7 +402,7 @@ p {
 }
 
 .project h1{
-	font-family: 'Glegoo', serif;
+	font-family: 'Bree Serif', serif;
 	font-size: 50;
 	display: block;
 	line-height: 45px;
