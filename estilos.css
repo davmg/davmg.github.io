@@ -76,6 +76,7 @@ nav ul{
 .nav-element:hover{
 	padding-bottom: 11px;
 	border-bottom: 1px solid white;
+	cursor: pointer;
 }
 
 .subrayado{
@@ -85,6 +86,7 @@ nav ul{
 .nav-element a{
 	color: white;
 	width: 100%;
+	display: block;
 }
 
 .nav-element a:link{
@@ -176,16 +178,12 @@ p {
 	margin-bottom: 0px;
 }
 
-.figura-ab{
-	transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-moz-transform: rotate(360deg);
-	-ms-transform: rotate(360deg);
-	transition:.2s ease-out;
+.figura{
+	width: 60%;
 }
 
-.figura-ab:hover{
-	transition: .2s ease-out;
+.figura-sub{
+	width: 60%;
 }
 
 .text-abilities{
@@ -194,6 +192,7 @@ p {
 	text-align: left;
 	color: var(--negro);
 	margin-bottom: 30px;
+	margin-top: 10px !important;
 	transition: .5s ease-out;
 }
 
@@ -201,13 +200,18 @@ p {
 	font-family: 'Bree Serif', serif;
 	font-size: 20; 
 	text-align: left;
-	color:  var(--gris);
+	color:  var(--negro);
 	margin-bottom: 30px;
+	margin-top: 10px !important;
+	opacity: 0.7;
 }
 
 @media (max-width: 760px){
 	.text-abilities{
 		color: var(--negro);
+	}
+	.figura{
+		width: 90%;
 	}
 }
 
@@ -374,6 +378,11 @@ p {
 .project{
 	position: relative;
 	margin-top: 100px;
+}
+
+.project a{
+	text-decoration: none ;
+	color: inherit;
 }
 
 @media (min-width: 1000px){
