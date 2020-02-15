@@ -14,5 +14,5 @@ $headers = "From: $email_envio \r\n";
 $headers .= "Reply-to: $email_visitante \r\n";
 
 mail($email_destino, $email_asunto, $email_body, $headers);
-header("Location:form.php");
+header("Location:form.hmtl");
 ?>
