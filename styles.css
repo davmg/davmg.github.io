@@ -282,7 +282,7 @@ nav{
     top: 0;
     position: absolute;
     width: 100%;
-    height: 75%;
+    height: 78%;
 }
 
 #square-knowledge{
@@ -326,8 +326,6 @@ nav{
 }
 
 .skill h6{
-    font-size: 14px;
-    font-weight: normal;
     margin-top: 15%;
     margin-bottom: 9%;
     width: 100%;
@@ -335,26 +333,30 @@ nav{
     color: var(--dark-gray);
 }
 
-.skill-A{
+.skill-A h6{
+    font-weight: normal;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
 }
-.skill-B{
+.skill-B h6{
+    font-weight: normal;
+    font-size: 14px;
     font-family: 'Arvo', serif;
     font-style: italic;
 }
-.skill-C{
+.skill-C h6{
+    font-weight: normal;
+    font-size: 14px;
     font-family: 'Coming Soon', sans-serif;
 }
-.skill-main{
+.skill-main h6{
     color: var(--black) !important;
     font-family: 'Merriweather', serif;
     font-style: italic;
-    font-weight: bold !important;
-    /* margin-bottom: 0 !important; */
+    font-weight: bold;
+    font-size: 16px;
 }
-.skill-main h6{
-    font-size: 16px !important;
-}
+
 .skill-main .dot-skill{
     background-color: var(--dark-green);
 }
@@ -378,11 +380,8 @@ nav{
     .skill{
         margin-bottom: 17.6%;
     }
-    .skill h6 {
-        font-size: 12px;
-    }
     #mesh-knowledge {
-        height: 84%;
+        height: 73%;
     }
     #square-knowledge {
         opacity: 0;
@@ -390,7 +389,7 @@ nav{
     .skill-main h6{
         font-size: 12px !important;
     }
-    .skill h6{
+    .skill-A h6, .skill-B h6, .skill-C h6{
         font-size: 10px !important;
     }
 }
