@@ -119,6 +119,7 @@ nav{
     outline: none;
     cursor: pointer;
     text-decoration: none;
+    transition: 200ms;
 }
 
 .nav-element h6{
@@ -126,11 +127,18 @@ nav{
     padding: 0;
 }
 
+.nav-elem-p h6{
+    writing-mode: horizontal-tb !important;
+}
+
+.nav-main-selected h6{
+    color: var(--dark-green);
+}
+
 .nav-selected h6{
     color: var(--dark-green);
     writing-mode: vertical-rl;
 }
-
 
 @media (max-width: 768px){
     nav{
@@ -163,6 +171,9 @@ nav{
         width: 90%;
         height: 1px;
         margin: 0;
+    }
+    .nav-selected h6{
+        writing-mode: horizontal-tb;
     }
 }
 
@@ -241,6 +252,12 @@ nav{
         align-self: self-start;
         margin-left: 12.5%;
         width: 35%;
+    }
+}
+
+@media (max-width: 350px){
+    #text-highlight h2{
+       margin-top: -203px;
     }
 }
 
@@ -368,7 +385,7 @@ nav{
         height: 84%;
     }
     #square-knowledge {
-        top: calc(42% - 1.25%);
+        opacity: 0;
     }
 }
 
@@ -657,6 +674,10 @@ nav{
     height: 268px;
     width: 100%;
     cursor: grab;
+}
+
+#legalapp{
+    margin-bottom: 120px;
 }
 
 .slick-prev

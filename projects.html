@@ -36,8 +36,6 @@
     <!-- // Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -53,6 +51,31 @@
     </script>
 
     <script language="javascript">
+        //Hide menu at top
+        function scrollFunction() {
+            let mainNavLinks = document.querySelectorAll("nav .nav-elem-p");
+            let mainSections = document.querySelectorAll("section");
+
+            let lastId;
+            let cur = [];
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach(link => {
+            console.log(fromTop);
+                let section = document.querySelector(link.hash);
+                if (
+                    section.offsetTop <= fromTop &&
+                    section.offsetTop + section.offsetHeight > fromTop
+                ) {
+                    link.classList.add("nav-selected");
+                } else {
+                    link.classList.remove("nav-selected");
+                }
+            });
+        }
+        window.onscroll = scrollFunction;
+
+
         $(function () {
             // Scroll to anchor
             $('nav').find('a[href*=#]').click(function () {

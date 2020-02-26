@@ -31,29 +31,84 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <!--Hide menu at top-->
     <script language="javascript">
+        //Hide menu at top
         function scrollFunction() {
             var scrollPos = document.body.scrollTop;
             var height = window.innerHeight;
             if (scrollPos >= height) {
                 document.getElementById("menu").style.position = "fixed";
-                if(screen.width>640){
+                if (screen.width > 640) {
                     document.getElementById("menu").style.top = "0px";
-                }else{
+                } else {
                     document.getElementById("menu").style.top = "calc(100vh - 60px)";
                 }
             } else {
                 document.getElementById("menu").style.position = "absolute";
-                if(screen.width>640){
+                if (screen.width > 640) {
                     document.getElementById("menu").style.top = "100vh";
-                }else{
+                } else {
                     document.getElementById("menu").style.top = "calc(200vh - 60px)";
                 }
             }
-        }
 
+
+            let mainNavLinks = document.querySelectorAll("nav .nav-element");
+            let mainSections = document.querySelectorAll("section");
+
+            let lastId;
+            let cur = [];
+            let fromTop = window.scrollY;
+            var i = 0;
+            var labelsDefault = [".d.", "kn", "wk", "ct"];
+            var labelsSelected = [".d.", "knowledge", "work", "contact"];
+
+            mainNavLinks.forEach(link => {
+                let section = document.querySelector(link.hash);
+                if (
+                    section.offsetTop <= fromTop &&
+                    section.offsetTop + section.offsetHeight > fromTop
+                ) {
+                    if (link.id == "nav-d") {
+                        link.classList.add("nav-main-selected");
+                    } else {
+                        link.classList.add("nav-selected");
+                    }
+                    link.querySelector("h6").innerHTML = labelsSelected[i];
+                } else {
+                    link.classList.remove("nav-selected");
+                    link.classList.remove("nav-main-selected");
+                    link.querySelector("h6").innerHTML = labelsDefault[i];
+                }
+                i++;
+            });
+        }
         window.onscroll = scrollFunction;
+
+        // var navItems = null;
+        // window.onload = function () {
+        //     navItems = document.getElementsByClassName("nav-element");
+        //     for (var i = 0; i < navItems.length; i++) {
+        //         // navItems[i].addEventListener('click', select, false);
+        //     }
+        // }
+
+        // function select() {
+        //     for (var i = 0; i < navItems.length; i++) {
+        //         if (navItems[i] != this) {
+        //             navItems[i].classList.remove("nav-selected");
+        //             navItems[i].classList.remove("nav-main-selected");
+        //             navItems[i].querySelector("h6").innerHTML = labelsDefault[i];
+        //         } else {
+        //             if (this.id == "nav-d") {
+        //                 navItems[i].classList.add("nav-main-selected");
+        //             } else {
+        //                 navItems[i].classList.add("nav-selected");
+        //             }
+        //             navItems[i].querySelector("h6").innerHTML = labelsSelected[i];
+        //         }
+        //     }
+        // }
     </script>
 
     <script language="javascript">
@@ -72,9 +127,9 @@
             });
 
             //Fade out
-            $('#work').find('.project-thumb').click(function(e){
+            $('#work').find('.project-thumb').click(function (e) {
                 link_href = this.href;
-                $('body').fadeOut(300, function(){
+                $('body').fadeOut(300, function () {
                     window.location.href = link_href;
                 });
                 return false;
@@ -99,16 +154,16 @@
     </header>
     <nav id="menu">
         <div id="nav-line"></div>
-        <a href="#intro" class="nav-element">
+        <a href="#intro" id="nav-d" class="nav-element">
             <h6>.d.</h6>
         </a>
-        <a href="#knowledge" class="nav-element">
+        <a href="#knowledge" id="nav-kn" class="nav-element">
             <h6>kn</h6>
         </a>
-        <a href="#work" class="nav-element">
+        <a href="#work" id="nav-wk" class="nav-element">
             <h6>wk</h6>
         </a>
-        <a href="#contact" class="nav-element">
+        <a href="#contact" id="nav-ct" class="nav-element">
             <h6>ct</h6>
         </a>
     </nav>
