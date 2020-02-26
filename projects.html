@@ -1,0 +1,185 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>.david.</title>
+    <meta name="description" content="Hello, I am an interactive media designer from Cali, Colombia">
+    <meta name="author" content="David Martínez Gordillo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="David" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://davmg.github.io/" />
+    <meta property="og:image" content="https://davmg.github.io/imgs/icn-david-card.png" />
+    <meta property="og:description" content="Hello, I am an interactive media designer from Cali, Colombia" />
+    <meta name="theme-color" content="#F8F8F8">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Arvo|Coming+Soon|Merriweather:400,700|Open+Sans:400,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="imgs/icn-david.png" />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.projects-carousel').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
+        });
+    </script>
+
+    <script language="javascript">
+        $(function () {
+            // Scroll to anchor
+            $('nav').find('a[href*=#]').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body').animate({ scrollTop: targetOffset }, 500);
+                        return false;
+                    }
+                }
+            });
+
+            //Fade out
+            $('nav').find('.back').click(function (e) {
+                link_href = this.href;
+                $('body').fadeOut(300, function () {
+                    window.location.href = link_href;
+                });
+                return false;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav id="menu-projects">
+        <div id="nav-line"></div>
+        <a href="index.html#work" class="nav-element back">
+            <h6>.d.</h6>
+        </a>
+        <a href="#domu" class="nav-element nav-elem-p">
+            <h6>domu</h6>
+        </a>
+        <a href="#mimic" class="nav-element nav-elem-p">
+            <h6>mimic</h6>
+        </a>
+        <a href="#moneysensei" class="nav-element nav-elem-p">
+            <h6>money sensei</h6>
+        </a>
+        <a href="#legalapp" class="nav-element nav-elem-p">
+            <h6>legalapp</h6>
+        </a>
+    </nav>
+    <section id="domu" class="project">
+        <div class="project-info">
+            <img src="imgs/square.png" alt="">
+            <h2 class="project-title">.domu <em>//Pediatric hospitalization experience</em></h2>
+            <p class="project-desc"><em>What I did /</em> Design research, Experience design, Prototyping, Game
+                development, User testing.</p>
+        </div>
+        <div class="projects-carousel">
+            <img class="imgs-carousel" src="imgs/domu/dom_im1.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im2.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im3.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im4.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im5.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im6.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im7.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im8.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im9.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im10.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im11.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im12.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im13.png">
+            <img class="imgs-carousel" src="imgs/domu/dom_im14.png">
+        </div>
+    </section>
+    <section id="mimic" class="project">
+        <div class="project-info">
+            <img src="imgs/square.png" alt="">
+            <h2 class="project-title">.mimic <em>//Salespeople training</em></h2>
+            <p class="project-desc"><em>What I did /</em> Requirement analysis, Use case scenarios, Interaction flow,
+                Prototyping, UI design & animation.
+                <br><br><em>Made for /</em> Squareball Studios © 2019</p>
+        </div>
+        <div class="projects-carousel">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im1.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im2.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im3.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im4.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im5.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im6.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im7.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im8.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im9.png">
+            <img class="imgs-carousel" src="imgs/mimic/mim_im10.png">
+        </div>
+    </section>
+    <section id="moneysensei" class="project">
+        <div class="project-info">
+            <img src="imgs/square.png" alt="">
+            <h2 class="project-title">.money sensei <em>//Personal finances advisor</em></h2>
+            <p class="project-desc"><em>What I did /</em> Interaction design, Interface design, Prototyping, App programming, Recommendation algorithm.</p>
+        </div>
+        <div class="projects-carousel">
+            <img class="imgs-carousel" src="imgs/money/mon_im1.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im2.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im3.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im4.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im5.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im6.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im7.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im8.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im9.png">
+            <img class="imgs-carousel" src="imgs/money/mon_im10.png">
+        </div>
+    </section>
+    <section id="legalapp" class="project">
+        <div class="project-info">
+            <img src="imgs/square.png" alt="">
+            <h2 class="project-title">.legalapp <em>//Law students assistant</em></h2>
+            <p class="project-desc"><em>What I did /</em> User research, Interaction design, Interface design.</p>
+        </div>
+        <div class="projects-carousel">
+            <img class="imgs-carousel" src="imgs/legal/leg_im1.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im2.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im3.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im4.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im5.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im6.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im7.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im8.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im9.png">
+            <img class="imgs-carousel" src="imgs/legal/leg_im10.png">
+        </div>
+    </section>
+</body>

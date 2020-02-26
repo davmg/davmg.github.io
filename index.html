@@ -1,0 +1,268 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>.david.</title>
+    <meta name="description" content="Hello, I am an interactive media designer from Cali, Colombia">
+    <meta name="author" content="David Martínez Gordillo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="David" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://davmg.github.io/" />
+    <meta property="og:image" content="https://davmg.github.io/imgs/icn-david-card.png" />
+    <meta property="og:description" content="Hello, I am an interactive media designer from Cali, Colombia" />
+    <meta name="theme-color" content="#F8F8F8">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Arvo|Coming+Soon|Merriweather:400,700|Open+Sans:400,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="imgs/icn-david.png" />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!--Hide menu at top-->
+    <script language="javascript">
+        function scrollFunction() {
+            var scrollPos = document.body.scrollTop;
+            var height = window.innerHeight;
+            if (scrollPos >= height) {
+                document.getElementById("menu").style.position = "fixed";
+                if(screen.width>640){
+                    document.getElementById("menu").style.top = "0px";
+                }else{
+                    document.getElementById("menu").style.top = "calc(100vh - 60px)";
+                }
+            } else {
+                document.getElementById("menu").style.position = "absolute";
+                if(screen.width>640){
+                    document.getElementById("menu").style.top = "100vh";
+                }else{
+                    document.getElementById("menu").style.top = "calc(200vh - 60px)";
+                }
+            }
+        }
+
+        window.onscroll = scrollFunction;
+    </script>
+
+    <script language="javascript">
+        $(function () {
+            // Scroll to anchor
+            $('nav').find('a[href*=#]').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body').animate({ scrollTop: targetOffset }, 500);
+                        return false;
+                    }
+                }
+            });
+
+            //Fade out
+            $('#work').find('.project-thumb').click(function(e){
+                link_href = this.href;
+                $('body').fadeOut(300, function(){
+                    window.location.href = link_href;
+                });
+                return false;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div id="mesh-header-container">
+            <img src="imgs/mesh.png" class="mesh-header">
+            <img src="imgs/mesh.png" class="mesh-header">
+            <img src="imgs/mesh.png" class="mesh-header">
+            <img src="imgs/square.png" id="mesh-header-square1" class="mesh-header-square">
+            <img src="imgs/square.png" id="mesh-header-square2" class="mesh-header-square">
+        </div>
+        <div id="logo-header">
+            <img src="imgs/logo.png" alt="logo">
+        </div>
+    </header>
+    <nav id="menu">
+        <div id="nav-line"></div>
+        <a href="#intro" class="nav-element">
+            <h6>.d.</h6>
+        </a>
+        <a href="#knowledge" class="nav-element">
+            <h6>kn</h6>
+        </a>
+        <a href="#work" class="nav-element">
+            <h6>wk</h6>
+        </a>
+        <a href="#contact" class="nav-element">
+            <h6>ct</h6>
+        </a>
+    </nav>
+    <section id="intro">
+        <div id="content-intro">
+            <img src="imgs/photo_d.png" id="photo">
+            <div id="text-highlight">
+                <h2>.david martínez gordillo.</h2>
+                <div class="highlight-borders">
+                    <p>I’m an <em>Interactive Media Designer</em> interested in product and experience design, research
+                        and creative coding.</p>
+                    <p>I also like maths, origami, photography and learning new languages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="knowledge">
+        <div id="content-knowledge">
+            <img src="imgs/mesh.png" id="mesh-knowledge">
+            <img src="imgs/square.png" id="square-knowledge">
+            <div id="list-skills">
+                <div class="skill skill-A">
+                    <div class="dot-skill"></div>
+                    <h6>research</h6>
+                </div>
+                <div class="skill skill-B">
+                    <div class="dot-skill"></div>
+                    <h6>information architecture</h6>
+                </div>
+                <div class="skill skill-C">
+                    <div class="dot-skill"></div>
+                    <h6>high-fidel prototypes</h6>
+                </div>
+                <div class="skill skill-A">
+                    <div class="dot-skill"></div>
+                    <h6>arduino</h6>
+                </div>
+                <div class="skill skill-B">
+                    <div class="dot-skill"></div>
+                    <h6>use case scenarios</h6>
+                </div>
+                <div class="skill skill-C">
+                    <div class="dot-skill"></div>
+                    <h6>ui style guide</h6>
+                </div>
+                <div class="skill skill-A">
+                    <div class="dot-skill"></div>
+                    <h6>html+css+js</h6>
+                </div>
+                <div class="skill skill-B">
+                    <div class="dot-skill"></div>
+                    <h6>unity 3d</h6>
+                </div>
+                <div class="skill skill-A">
+                    <div class="dot-skill"></div>
+                    <h6>interaction flows & wireframing</h6>
+                </div>
+                <div class="skill skill-B">
+                    <div class="dot-skill"></div>
+                    <h6>ui animation</h6>
+                </div>
+                <div class="skill skill-C">
+                    <div class="dot-skill"></div>
+                    <h6>testing</h6>
+                </div>
+                <div class="skill skill-A">
+                    <div class="dot-skill"></div>
+                    <h6>processing</h6>
+                </div>
+                <div class="skill skill-main">
+                    <div class="dot-skill"></div>
+                    <h6>user experience</h6>
+                </div>
+                <div class="skill skill-main">
+                    <div class="dot-skill"></div>
+                    <h6>interface design</h6>
+                </div>
+                <div class="skill skill-main">
+                    <div class="dot-skill"></div>
+                    <h6>prototyping</h6>
+                </div>
+                <div class="skill skill-main">
+                    <div class="dot-skill"></div>
+                    <h6>creative coding</h6>
+                </div>
+            </div>
+            <!--Close list-->
+        </div>
+    </section>
+    <!--Close Skills-->
+    <section id="work">
+        <div id="content-work">
+            <a class="project-thumb thumb-big" href="projects.html#domu">
+                <div id="thumb-domu" class="thumb-img"></div>
+                <div class="thumb-gradient"></div>
+                <div class="hover-effects">
+                    <div class="thumb-gradient-hover"></div>
+                    <img class="thumb-x" src="imgs/tmb_x.png">
+                    <h4>Domu</h4>
+                    <p>Pediatric hospitalization experience</p>
+                </div>
+            </a>
+            <a class="project-thumb thumb-small" href="projects.html#mimic">
+                <div id="thumb-mimic" class="thumb-img"></div>
+                <div class="thumb-gradient"></div>
+                <div class="hover-effects">
+                    <div class="thumb-gradient-hover"></div>
+                    <img class="thumb-x" src="imgs/tmb_x.png">
+                    <h4>Mimic</h4>
+                    <p>Sales people training</p>
+                </div>
+            </a>
+            <a class="project-thumb thumb-small" href="projects.html#moneysensei">
+                <div id="thumb-money" class="thumb-img"></div>
+                <div class="thumb-gradient"></div>
+                <div class="hover-effects">
+                    <div class="thumb-gradient-hover"></div>
+                    <img class="thumb-x" src="imgs/tmb_x.png">
+                    <h4>Money Sensei</h4>
+                    <p>Personal finances advisor</p>
+                </div>
+            </a>
+            <a class="project-thumb thumb-big" href="projects.html#legalapp">
+                <div id="thumb-legal" class="thumb-img"></div>
+                <div class="thumb-gradient"></div>
+                <div class="hover-effects">
+                    <div class="thumb-gradient-hover"></div>
+                    <img class="thumb-x" src="imgs/tmb_x.png">
+                    <h4>Legalapp</h4>
+                    <p>Law students assistant</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="contact">
+        <img id="globe" src="imgs/globe.png">
+        <div id="content-contact">
+            <div id="contact-items">
+                <h2>.thanks for reaching out.</h2>
+                <div class="highlight-borders">
+                    <a class="contact-item" href="https://www.linkedin.com/in/dmartinezgordillo" target="_blank">
+                        <p>www.linkedin.com/in/dmartinezgordillo</p>
+                        <img class="icn-contact" src="imgs/icn_in.png">
+                    </a>
+                    <a class="contact-item" href="mailto:david12mg96@gmail.com" target="_blank">
+                        <p>david12mg96@gmail.com</p>
+                        <img class="icn-contact" src="imgs/icn_mail.png">
+                    </a>
+                    <a class="contact-item" href="cv/cv_DavidMartinez_EN.pdf" download target="_blank">
+                        <p>download my CV</p>
+                        <img class="icn-contact" src="imgs/icn_cv.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
