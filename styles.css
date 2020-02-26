@@ -387,6 +387,12 @@ nav{
     #square-knowledge {
         opacity: 0;
     }
+    .skill-main h6{
+        font-size: 14px !important;
+    }
+    .skill h6{
+        font-size: 12px;
+    }
 }
 
 /* ---------WORK----------  */
