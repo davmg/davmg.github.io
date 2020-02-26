@@ -394,6 +394,12 @@ nav{
     }
 }
 
+@media (max-width: 350px){
+    .skill{
+        margin-bottom: 11.6%;
+    }
+}
+
 /* ---------WORK----------  */
 
 #work{
