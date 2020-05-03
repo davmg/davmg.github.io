@@ -278,20 +278,6 @@ nav{
     position: relative;
 }
 
-#mesh-knowledge{
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 78%;
-}
-
-#square-knowledge{
-    position: absolute;
-    width: 2.5%;
-    min-width: 14px;
-    left: calc(50% - 1.25%);
-    top: calc(44% - 1.25%);
-}
 
 #list-skills{
     display: flex;
@@ -317,12 +303,27 @@ nav{
     margin-bottom: 10.6%;
 }
 
+.square-knowledge{
+    position: absolute;
+    width: 14px;
+    left: calc(50% - 7px);
+    top: 0;
+}
+
 .dot-skill{
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: var(--light-gray);
     margin-top: -1%;
+}
+
+.line-skill{
+    width: 2px;
+    height: 50%;
+    background-color: var(--light-gray);
+    position: absolute;
+    top: -42%;
 }
 
 .skill h6{
@@ -350,6 +351,7 @@ nav{
     font-family: 'Coming Soon', sans-serif;
 }
 .skill-main h6{
+    margin-top: 25%;
     color: var(--black) !important;
     font-family: 'Merriweather', serif;
     font-style: italic;
@@ -357,19 +359,9 @@ nav{
     font-size: 16px;
 }
 
-.skill-main .dot-skill{
-    background-color: var(--dark-green);
-}
-
 @media (max-width: 768px){
     #content-knowledge{
         width: 50%;
-    }
-    #mesh-knowledge {
-        height: 77%;
-    }
-    #square-knowledge {
-        top: calc(38.5% - 1.25%);
     }
 }
 @media (max-width: 640px){
@@ -380,12 +372,7 @@ nav{
     .skill{
         margin-bottom: 17.6%;
     }
-    #mesh-knowledge {
-        height: 73%;
-    }
-    #square-knowledge {
-        opacity: 0;
-    }
+
     .skill-main h6{
         font-size: 12px !important;
     }
@@ -529,6 +516,15 @@ nav{
     z-index: 2;
     margin: 0;
     left: 22px;
+}
+
+.project-thumb .label-seemore{
+    text-align: right;
+    position: absolute;
+    right: 22px;
+    text-decoration: underline;
+    color: var(--dark-gray);
+    font-size: 12px;
 }
 
 @media (max-width: 768px){
@@ -682,7 +678,7 @@ nav{
 }
 
 .projects-carousel{
-    height: 268px;
+    height: 360px;
     width: 100%;
     cursor: grab;
 }
@@ -708,16 +704,17 @@ nav{
 #menu-projects{
     position: fixed;
     top: 0;
-    left: 40px;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 120px;
+    padding-left: 40px;
     z-index: 4;
     background: rgb(248,248,248);
-    background: linear-gradient(90deg, rgba(248,248,248,0) 0%, rgba(248,248,248,1) 15%, rgba(248,248,248,1) 85%, rgba(248,248,248,0) 100%);
+    background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(248,248,248,1) 92%, rgba(248,248,248,0) 100%);
 }
 
 .nav-elem-p{
