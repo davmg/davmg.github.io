@@ -246,12 +246,13 @@ nav{
     #text-highlight h2{
         margin-left: calc(24px + 35%);
        font-size: 28px;
+        margin-top: -110px;
     }
 
     #photo{
         align-self: self-start;
         margin-left: 12.5%;
-        width: 35%;
+        width:28%;
     }
 }
 
