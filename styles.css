@@ -267,9 +267,10 @@ nav{
 #knowledge{
     padding: 80px 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 160px);
+    min-height: calc(100vh - 160px);
 }
 
 #content-knowledge{
@@ -360,9 +361,46 @@ nav{
     font-size: 16px;
 }
 
+#content-academic{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#content-academic h2{
+    width: 200px;
+    margin: 0 40px 0 0;
+}
+
+#content-academias{
+    display: flex;
+    flex-direction: row;
+}
+
+.academia{
+    width: 210px;
+    margin: 0 20px;
+}
+
+.academia img{
+    width: 100%;
+}
+
 @media (max-width: 768px){
     #content-knowledge{
         width: 50%;
+    }
+
+    #content-academic{
+        flex-direction: column;
+    }
+
+    #content-academic h2{
+        margin: 0 0 40px 0;
+    }
+
+    .academia{
+        margin: 0 20px 0 0;
     }
 }
 @media (max-width: 640px){
@@ -382,9 +420,12 @@ nav{
     }
 }
 
-@media (max-width: 350px){
+@media (max-width: 375px){
     .skill{
         margin-bottom: 11.6%;
+    }
+    #content-academias{
+        flex-direction: column;
     }
 }
 
