@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
     pageIndicators = document.getElementsByClassName("punto-navegacion");
     console.log(currentPage);
     setTimeout(function(){
-        goToPage(0);
+        goToPage(1);
     },400);
 
     btnSiguiente.addEventListener("click", function() {
