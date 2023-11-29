@@ -555,7 +555,8 @@ span {
     }
 
     #puntos {
-        width: 80%;
+        width: 100%;
+        justify-content: center;
     }
 
     .punto-navegacion {
@@ -599,33 +600,38 @@ span {
         font-size: 18px;
     }
 
+    .profile-intro {
+        width: 80%;
+        max-width: 600px;
+    }
+
     #home .profile-intro #svg-counter {
         position: absolute;
-        right: -36%;
-        top: -160px;
+        right: -16%;
+        top: -180px;
         width: 150px;
     }
 
     #home .profile-intro #svg-tower {
-        position: absolute;
-        left: -374px;
-        bottom: -355px;
+        left: -194px;
+        bottom: -475px;
+        width: 100%;
     }
 
     #text-counter {
-        position: absolute;
-        right: -19%;
-        top: -108px;
-        color: var(--secondary);
-        font-weight: 700;
+        right: -6%;
+        top: -125px;
+    }
+
+    #details-home {
+        width: 90%;
+        margin: 160px auto 64px;
+        padding-top: 64px;
     }
 
     .home-info {
-        display: flex;
         width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
+        margin: 24px 0;
     }
 
     .info-left {
@@ -636,8 +642,12 @@ span {
         margin-right: 0;
     }
     #svg-map {
-        width: 90%;
+        width: 100%;
         margin: 0;
+    }
+
+    #news{
+        width: 150%;
     }
 
 }
