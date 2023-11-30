@@ -513,12 +513,14 @@ span {
     position: absolute;
     left: -40%;
     top: 0;
+    width: 230px;
 }
 
 .timeline-element.image-right img {
     position: absolute;
     right: -40%;
     top: 0;
+    width: 230px;
 }
 
 @media(max-width: 970px) {
