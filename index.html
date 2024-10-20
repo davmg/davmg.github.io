@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,7 +19,8 @@
     <meta property="og:description" content="Hello, I am an interactive media designer from Cali, Colombia" />
     <meta name="theme-color" content="#F8F8F8">
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles-global.css">
+    <link rel="stylesheet" type="text/css" href="styles-home.css">
 
     <!-- Fonts -->
     <link
@@ -34,7 +36,7 @@
     <script language="javascript">
         //Hide menu at top
         function scrollFunction() {
-            var scrollPos = document.body.scrollTop;
+            var scrollPos = window.pageYOffset;
             var height = window.innerHeight;
             if (scrollPos >= height) {
                 document.getElementById("menu").style.position = "fixed";
@@ -60,8 +62,8 @@
             let cur = [];
             let fromTop = window.scrollY;
             var i = 0;
-            var labelsDefault = [".d.", "kn", "wk", "ct"];
-            var labelsSelected = [".d.", "knowledge", "work", "contact"];
+            var labelsDefault = [".d.", "bg", "wk", "ct"];
+            var labelsSelected = [".d.", "background", "work", "contact"];
 
             mainNavLinks.forEach(link => {
                 let section = document.querySelector(link.hash);
@@ -151,7 +153,7 @@
 
 </head>
 
-<body>
+<body onload="document.body.style.opacity='1'">
     <header>
         <div id="mesh-header-container">
             <img src="imgs/mesh.png" class="mesh-header">
@@ -170,7 +172,7 @@
             <h6>.d.</h6>
         </a>
         <a href="#knowledge" id="nav-kn" class="nav-element">
-            <h6>kn</h6>
+            <h6>bg</h6>
         </a>
         <a href="#work" id="nav-wk" class="nav-element">
             <h6>wk</h6>
@@ -186,7 +188,7 @@
                 <h2>.david martínez gordillo.</h2>
                 <div class="highlight-borders">
                     <p>I’m an <em>Interactive Media Designer</em> with experience in UX design, research, creative coding and formal training in service systems design.</p>
-                    <p>I also like watercolor painting, origami, learning new languages and I'm a certified scuba diver.</p>
+                    <p>Originally from Cali, Colombia, currently in Milan, Italy. I also like watercolor painting, origami, learning new languages and I'm a certified scuba diver.</p>
                 </div>
             </div>
         </div>
@@ -275,7 +277,6 @@
         </div>
         <div id="content-academic">
             <h2>.academic experience.</h2>
-            <div id="content-academias">
                 <div class="academia">
                     <a href="https://www.pssd.polimi.it/index.html" target="_blank"><img src="imgs/logo_polimi.png"></a>
                     <p><em>Product Service System Design</em><br> Master of Science Degree <br>(2023-2025)</p>
@@ -288,13 +289,12 @@
                     <a href="https://www.interaction-design.org/david-martinez" target="_blank"><img src="imgs/logo_idf.png"></a>
                     <p><em>UX basics, User research, HCI </em><br> Self-paced Courses</p>
                 </div>
-            </div>
         </div> <!--Close academic-->
     </section>
     <!--Close Skills-->
     <section id="work">
-        <div id="content-work">
-            <a class="project-thumb thumb-big" href="projects.html#domu">
+        <div id="content-work" class="flex-row">
+            <a class="project-thumb col-5" href="domu.html">
                 <div id="thumb-domu" class="thumb-img"></div>
                 <div class="thumb-gradient"></div>
                 <div class="hover-effects">
@@ -302,10 +302,32 @@
                     <img class="thumb-x" src="imgs/tmb_x.png">
                     <h4>Domu</h4>
                     <p>Pediatric hospitalization experience</p>
-                    <p class="label-seemore"><em>See more</em></p>
+                    <p class="label-seemore">See more</p>
                 </div>
             </a>
-            <a class="project-thumb thumb-small" href="projects.html#mimic">
+            <a class="project-thumb col-5" href="morningstar.html">
+                <div id="thumb-mor" class="thumb-img"></div>
+                <div class="thumb-gradient"></div>
+                <div class="hover-effects">
+                    <div class="thumb-gradient-hover"></div>
+                    <img class="thumb-x" src="imgs/tmb_x.png">
+                    <h4>Morningstar TAMP</h4>
+                    <p>Financial advisors asset management platform</p>
+                    <p class="label-seemore">See more</p>
+                </div>
+            </a>
+            <a class="project-thumb col-5" href="miscusi.html">
+                <div id="thumb-mis" class="thumb-img"></div>
+                <div class="thumb-gradient"></div>
+                <div class="hover-effects">
+                    <div class="thumb-gradient-hover"></div>
+                    <img class="thumb-x" src="imgs/tmb_x.png">
+                    <h4>Cosa Bolle in Pentola</h4>
+                    <p>Employee communication and recognition system</p>
+                    <p class="label-seemore">See more</p>
+                </div>
+            </a>
+            <a class="project-thumb col-5" href="mimic.html">
                 <div id="thumb-mimic" class="thumb-img"></div>
                 <div class="thumb-gradient"></div>
                 <div class="hover-effects">
@@ -313,29 +335,7 @@
                     <img class="thumb-x" src="imgs/tmb_x.png">
                     <h4>Mimic</h4>
                     <p>Sales people training</p>
-                    <p class="label-seemore"><em>See more</em></p>
-                </div>
-            </a>
-            <a class="project-thumb thumb-small" href="projects.html#moneysensei">
-                <div id="thumb-money" class="thumb-img"></div>
-                <div class="thumb-gradient"></div>
-                <div class="hover-effects">
-                    <div class="thumb-gradient-hover"></div>
-                    <img class="thumb-x" src="imgs/tmb_x.png">
-                    <h4>Money Sensei</h4>
-                    <p>Personal finances advisor</p>
-                    <p class="label-seemore"><em>See more</em></p>
-                </div>
-            </a>
-            <a class="project-thumb thumb-big" href="projects.html#legalapp">
-                <div id="thumb-legal" class="thumb-img"></div>
-                <div class="thumb-gradient"></div>
-                <div class="hover-effects">
-                    <div class="thumb-gradient-hover"></div>
-                    <img class="thumb-x" src="imgs/tmb_x.png">
-                    <h4>Legalapp</h4>
-                    <p>Law students assistant</p>
-                    <p class="label-seemore"><em>See more</em></p>
+                    <p class="label-seemore">See more</p>
                 </div>
             </a>
         </div>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Arvo:400|Coming+Soon:400|Merriweather:400,700,900|Open+Sans:400,700&display=block"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>.david.</title>
+    <meta name="description" content="Hello, I am an interactive media designer from Cali, Colombia">
+    <meta name="author" content="David Martínez Gordillo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="David" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://davmg.github.io/" />
+    <meta property="og:image" content="https://davmg.github.io/imgs/icn-david-card.png" />
+    <meta property="og:description" content="Hello, I am an interactive media designer from Cali, Colombia" />
+    <meta name="theme-color" content="#F8F8F8">
+
+    <link rel="stylesheet" type="text/css" href="styles-global.css">
+    <link rel="stylesheet" type="text/css" href="styles-projects.css">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="imgs/icn-david.png" />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.projects-carousel').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
+        });
+    </script>
+
+    <script language="javascript">
+
+        /* $(function () {
+            //Fade out
+            $('nav').find('.nav-element').click(function (e) {
+                link_href = this.href;
+                $('#wrapper').fadeOut(300, function () {
+                    window.location.href = link_href;
+                });
+                return false;
+            });
+        }); */
+    </script>
+
+</head>
+
+<body onload="document.getElementById('wrapper').style.opacity='1'">
+    <nav id="menu-projects">
+        <div id="menu-container">
+            <div id="nav-line"></div>
+            <a href="index.html#work" class="nav-element back">
+                <p>.d.</p>
+            </a>
+            <a href="domu.html" class="nav-element nav-elem-p nav-selected">
+                <p>Domu</p>
+            </a>
+            <a href="morningstar.html" class="nav-element nav-elem-p ">
+                <p>Morningstar</p>
+            </a>
+            <a href="miscusi.html" class="nav-element nav-elem-p">
+                <p>Miscusi CBIP</p>
+            </a>
+            <a href="mimic.html" class="nav-element nav-elem-p">
+                <p>Mimic</p>
+            </a>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <section class="project-header">
+            <div class="banner">
+                <img class="banner-img-1" src="imgs/domu/dom-im-01.png">
+                <video muted loop autoplay class="banner-img-2" alt="" src="imgs/domu/demo-valen-s.mp4"></video>
+            </div>
+            <div class="intro flex-row">
+                <div class="project-desc-1 col-4">
+                    <div class="project-name">
+                        <h2 class="title">Domu</h2>
+                        <h4 class="emphasis">Pediatric hospitalization experience</h4>
+                    </div>
+                    <p>
+                        Digital–physical community for patients to bond with each other and strengthen
+                        psychosocial support processes and development of coping mechanisms.
+                    </p>
+                    <p>Capstone project, 2017</p>
+                </div>
+                <div class="col-1 separator-v-container">
+                    <div class="separator-v"></div>
+                </div>
+                <div class="project-desc-2 col-5">
+                    <div class="highlight">
+                        <h4>Personal Highlight</h4>
+                        <p>I got to empathize with the children and their families. Deeply
+                            understanding their contexts helped me later to explore different ideas. I also tried
+                            multiple research methods adapted to children needs and restrictions in a hospital environment.</p>
+                    </div>
+                    <div class="secondary-info">
+                        <div class="what-i-did">
+                            <h4>What I did</h4>
+                            <p>Design Research, Experience Design, Prototyping, Game Development,
+                                Usability Testing.</p>
+                        </div>
+                        <div class="tools">
+                            <h4>Tools</h4>
+                            <p>Design Probes (Diary), Interviews, Adobe Illustrator, 3Ds Max, 3D
+                                Printing, Unity.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="square" alt="" src="imgs/square.png">
+            </div>
+        </section>
+
+        <div class="flex-row project-row">
+            <div class="col-3">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-02.png">
+            </div>
+            <div class="col-4">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-03.png">
+            </div>
+            <div class="col-3 text-container l-padding align-bottom">
+                <h2 class="subtitle">Background</h2>
+                <p>
+                    Children have reduced abilities for the development of <em>coping mechanisms.</em>
+                </p>
+                <p>
+                    Hospitalization is a traumatic experience which can be <em>intervened with technology.</em>
+                </p>
+            </div>
+        </div>
+
+        <section class="highlight-section">
+            <div class="flex-row project-row">
+                <div class="col-3 text-container r-padding align-bottom">
+                    <h2 class="subtitle">Research</h2>
+                    <p>
+                        Experience was mapped with a <em>journal made by patients</em> in a pediatric care unit and
+                        interviews to their companions.
+                    </p>
+                    <p>
+                        The intention was to <em>understand their reality</em> inside the hospital, their relationships,
+                        feelings, expectations and perception of themselves.
+                    </p>
+                </div>
+                <div class="col-3">
+                    <img class="project-photo" alt="" src="imgs/domu/dom-im-04.png">
+                </div>
+                <div class="col-4">
+                    <img class="project-photo" alt="" src="imgs/domu/dom-im-05.png">
+                </div>
+            </div>
+            <div class="flex-row project-row">
+                <div class="col-7">
+                    <img class="project-photo" alt="" src="imgs/domu/dom-im-06.png">
+                </div>
+                <div class="col-3 text-container l-padding align-bottom">
+                    <p>
+                        The experience mapping activities, along with experts interviews and theoretical research, were
+                        analyzed to <em>create a system map.</em>
+                    </p>
+                    <p>
+                        It involves all the parts that take part in the experience and served as starting point to
+                        identify
+                        opportunities.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding align-bottom">
+                <h2 class="subtitle">Ideation</h2>
+                <p>
+                    A general flowchart involving all the parts that intervene in the experience was created. Wireframes
+                    and
+                    a storyboard helped on visualizing the concept
+                </p>
+            </div>
+            <div class="col-3">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-07.png">
+            </div>
+            <div class="col-4">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-08.png">
+            </div>
+        </div>
+
+        <div class="flex-row project-row">
+            <div class="col-3">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-09.png">
+            </div>
+            <div class="col-7">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-10.png">
+            </div>
+        </div>
+
+        <section class="emphasis-section">
+            <div class="flex-row project-row">
+                <div class="col-2">
+                </div>
+                <div class="col-6">
+                    <p class="emphasis-large">
+                        The resulting idea is a digital platform with physical interfaces in which <em>patients can
+                            interact
+                            with other children in their same situation.</em>This proposal is intended to strengthen
+                        psychosocial treatment and facilitate the <em>creation of support networks.</em>
+                    </p>
+                </div>
+                <div class="col-2">
+                </div>
+            </div>
+        </section>
+        <div id="carousel-domu" class="projects-carousel">
+            <img class="imgs-carousel" src="imgs/domu/dom-im-11.png">
+            <img class="imgs-carousel" src="imgs/domu/dom-im-12.png">
+            <img class="imgs-carousel" src="imgs/domu/dom-im-13.png">
+            <img class="imgs-carousel" src="imgs/domu/dom-im-14.png">
+        </div>
+
+        <div class="flex-row project-row">
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-15.png">
+                <div class="photo-container-h" style="width: 100%;">
+                    <div style="flex: 4;">
+                        <img class="project-photo" alt="" src="imgs/domu/dom-im-16.png">
+                    </div>
+                    <div style="flex: 6;">
+                        <img class="project-photo" alt="" src="imgs/domu/dom-im-17.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 text-container l-padding align-bottom">
+                <h2 class="subtitle">Development</h2>
+                <p>
+                    We planned the <em> interaction of all the elements and actors</em> of the solution system.
+                </p>
+                <p>
+                    Then coded the digital platforms and prototyped the physical objects using 3D printing.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding align-top">
+                <h2 class="subtitle">Testing</h2>
+                <p>
+                    Prototypes were introduced in the hospital and tested for 5 days with 2 patients.
+                </p>
+                <p>
+                    Patients and family enjoyed having a different way to spend their time while in isolation.
+                    Psychologists
+                    recognized the value of the idea in supporting their processes.
+                </p>
+            </div>
+            <div class="col-7">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-18.png">
+            </div>
+        </div>
+    </div>
+</body>

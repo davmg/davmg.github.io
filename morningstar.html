@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Arvo:400|Coming+Soon:400|Merriweather:400,700,900|Open+Sans:400,700&display=block"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>.david.</title>
+    <meta name="description" content="Hello, I am an interactive media designer from Cali, Colombia">
+    <meta name="author" content="David Martínez Gordillo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="David" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://davmg.github.io/" />
+    <meta property="og:image" content="https://davmg.github.io/imgs/icn-david-card.png" />
+    <meta property="og:description" content="Hello, I am an interactive media designer from Cali, Colombia" />
+    <meta name="theme-color" content="#F8F8F8">
+
+    <link rel="stylesheet" type="text/css" href="styles-global.css">
+    <link rel="stylesheet" type="text/css" href="styles-projects.css">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="imgs/icn-david.png" />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.projects-carousel').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
+        });
+    </script>
+
+    <script language="javascript">
+
+        /* $(function () {
+
+            //Fade out
+            $('nav').find('.nav-element').click(function (e) {
+                link_href = this.href;
+                $('#wrapper').fadeOut(300, function () {
+                    window.location.href = link_href;
+                });
+                return false;
+            });
+        }); */
+    </script>
+
+</head>
+
+<body onload="document.getElementById('wrapper').style.opacity='1'">
+    <nav id="menu-projects">
+        <div id="menu-container">
+            <div id="nav-line"></div>
+            <a href="index.html#work" class="nav-element back">
+                <p>.d.</p>
+            </a>
+            <a href="domu.html" class="nav-element nav-elem-p">
+                <p>Domu</p>
+            </a>
+            <a href="morningstar.html" class="nav-element nav-elem-p nav-selected">
+                <p>Morningstar</p>
+            </a>
+            <a href="miscusi.html" class="nav-element nav-elem-p">
+                <p>Miscusi CBIP</p>
+            </a>
+            <a href="mimic.html" class="nav-element nav-elem-p">
+                <p>Mimic</p>
+            </a>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <section class="project-header">
+            <div class="banner">
+                <img class="banner-img-1" src="imgs/morningstar/mor-im-01.png">
+                <img class="banner-img-2" src="imgs/morningstar/mor-im-02.png">
+            </div>
+            <div class="intro flex-row">
+                <div class="project-desc-1 col-4">
+                    <div class="project-name">
+                        <h2 class="title">Morningstar TAMP</h2>
+                        <h4 class="emphasis">Financial advisors asset management platform</h4>
+                    </div>
+                    <p>
+                        Web application where advisors are able to start, track and maintain their clients investments.
+                    </p>
+                    <p>© Morningstar, 2024</p>
+                </div>
+                <div class="col-1 separator-v-container">
+                    <div class="separator-v"></div>
+                </div>
+                <div class="project-desc-2 col-5">
+                    <div class="highlight">
+                        <h4>Personal Highlight</h4>
+                        <p>It was fulfilling to see how the product evolved from being paper-based to digital workflows,
+                            making users work in a more efficient and reliable way.</p>
+                        <p>I was part of that evolution by mediating between stakeholders and compiling all necessities
+                            in a single product-service offering.</p>
+                    </div>
+                    <div class="secondary-info">
+                        <div class="what-i-did">
+                            <h4>What I did</h4>
+                            <p>Discovery, Information architecture, User research, Interface design</p>
+                        </div>
+                        <div class="tools">
+                            <h4>Tools</h4>
+                            <p>Interviews, Interaction Flows, Figma, HeyMarvin.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="square" alt="" src="imgs/square.png">
+            </div>
+        </section>
+
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding align-bottom">
+                <h2 class="subtitle">Discovery</h2>
+                <p>
+                    I participated in ongoing <em>feedback gathering </em>methods such as surveys and Customer Success
+                    team interviews.
+                </p>
+                <p>
+                    Also, I got to <em>audit existing features and propose improvements</em> to the platform.
+                </p>
+            </div>
+            <div class="col-4">
+                <img class="project-photo" alt="" src="imgs/morningstar/mor-im-03.png">
+            </div>
+            <div class="col-3">
+                <img class="project-photo" alt="" src="imgs/morningstar/mor-im-04.png">
+            </div>
+        </div>
+
+        <section class="highlight-section">
+            <div class="flex-row project-row">
+                <div class="col-7">
+                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-05.png">
+                </div>
+                <div class="col-3 text-container l-padding align-bottom">
+                    <h2 class="subtitle">Mapping</h2>
+                    <p>
+                        I mapped the system flows involved, including the <em>interaction with internal and external
+                            stakeholders.</em>
+                    </p>
+                    <p>
+                        Improvement opportunities were identified and analyzed with <em>product and technology
+                            teams.</em>
+                    </p>
+                </div>
+            </div>
+            <div class="flex-row project-row">
+                <div class="col-3 text-container r-padding align-top">
+                    <h2 class="subtitle">Ideation</h2>
+                    <p>
+                        New features or tools were proposed via <em>task flows and low-fidelity prototypes.</em>
+                    </p>
+                    <p>
+                        These were later reviewed with internal stakeholders to validate <em>impact and
+                            feasibility.</em>
+                    </p>
+                    <p>
+                        I acted as intermediary of different areas by envisioning the solutions as a whole.
+                    </p>
+                </div>
+                <div class="col-7">
+                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-06.png">
+                </div>
+            </div>
+        </section>
+
+        <div class="flex-row project-row">
+            <div class="col-7 photo-container-v">
+                <div>
+                    <video autoplay loop muted class="project-photo" alt="" src="imgs/morningstar/mor-im-07.mp4"></video>
+                </div>
+                <div>
+                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-08.png">
+                </div>
+            </div>
+            <div class="col-3 text-container l-padding align-bottom">
+                <h2 class="subtitle">Testing</h2>
+                <p>
+                    Proposals were tested with financial advisors through moderated <em>usability testing.</em>
+                </p>
+                <p>
+                    This allowed also to <em>understand the perceived usefulness </em>for users and whether they will
+                    find motivation to use the solutions or not.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding align-top">
+                <h2 class="subtitle">Implementation</h2>
+                <p>
+                    The final stage was to produce <em>interface designs</em> that were delivered to the development
+                    team.
+                </p>
+                <p>
+                    Quality was assured in terms of visual fidelity as well as experience consistency across all
+                    features and tools.
+                </p>
+            </div>
+            <div class="col-7 photo-container-v">
+                <div>
+                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-09.png">
+                </div>
+                <div>
+                    <video autoplay loop muted class="project-photo" alt="" src="imgs/morningstar/mor-im-10.mov"></video>
+                </div>
+            </div>
+        </div>
+
+        <section class="emphasis-section">
+            <div class="flex-row project-row">
+                <div class="col-2">
+                </div>
+                <div class="col-6">
+                    <p class="emphasis-large">
+                        The vision of the platform is to become a <em>one-stop-shop solution for financial advisors </em>to
+                        maintain their business relationships. It will provide information and capabilities that bring
+                        several parties together into a top-notch service.
+                    </p>
+                </div>
+                <div class="col-2">
+                </div>
+            </div>
+        </section>
+        <div id="carousel-morningstar" class="projects-carousel">
+            <img class="imgs-carousel" src="imgs/morningstar/mor-im-11.png">
+            <img class="imgs-carousel" src="imgs/morningstar/mor-im-12.png">
+            <img class="imgs-carousel" src="imgs/morningstar/mor-im-13.png">
+            <img class="imgs-carousel" src="imgs/morningstar/mor-im-14.png">
+        </div>
+
+    </div>
+</body>

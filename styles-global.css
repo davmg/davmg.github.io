@@ -1,0 +1,131 @@
+:root {
+    /* fonts */
+    --serif: 'Merriweather', serif;
+    --sans-serif: 'Open Sans', sans-serif;
+    /* font sizes */
+    --font-size-xs: 12px;
+    --text-body-size: 14px;
+    --emphasis-size: 18px;
+    --subtitles-size: 26px;
+    --title-size: 32px;
+    /* Colors */
+    --bg: #f8f8f8;
+    --bg-green: #ECF4F2;
+    --light-green: #00A576;
+    --light-gray: #d1d1d1;
+    --dark-green: #00845b;
+    --dark-gray: #5c5c5c;
+    --color-white: #fff;
+    --black: #262626;
+    /* Spacing */
+    --corner-radius: 4px;
+    /* Gaps */
+    --gap-xl: 20px;
+    --gap-5xs: 8px;
+    --gap-37xl: 56px;
+    /* Paddings */
+    --padding-base: 16px;
+    --padding-171xl: 190px;
+    /* Border radiuses */
+    --br-9xs: 4px;
+
+    /*Column setting*/
+    --columns: 10;
+    --gap: 10px;
+    --gap-count:calc( var(--columns) - 1 );
+    --basis: calc( calc( 100% / var(--columns) ) - calc( var(--gap) / var(--columns) * var(--gap-count) ) );
+}
+
+::selection {
+    background-color: var(--light-green);
+    color: white;
+}
+
+html {
+    scrollbar-gutter: stable;
+    font-display: block;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg);
+}
+
+h2 {
+    color: var(--black);
+    font-family: var(--serif);
+    font-size: var(--title-size);
+    font-weight: 900;
+    margin: 0;
+}
+
+h3 {
+    color: var(--dark-green);
+    font-family: var(--serif);
+    font-size: var(--subtitles-size);
+    font-weight: 900;
+    margin: 0;
+}
+
+h4 {
+    color: var(--black);
+    font-family: var(--serif);
+    font-size: var(--emphasis-size);
+    font-weight: 900;
+    margin: 0;
+}
+
+p, li {
+    font-family: var(--sans-serif);
+    color: var(--dark-gray);
+    font-weight: normal;
+    font-size: var(--text-body-size);
+    margin: 0;
+    &:not(:last-child)  {
+        margin-bottom: 4px;
+    }
+}
+
+ul{
+    margin: 0;
+    padding-inline-start: 24px;
+}
+
+em {
+    font-family: var(--serif);
+    font-style: normal;
+    font-weight: 900;
+    margin: 0;
+}
+
+/*10 COLUMNS*/
+
+*{
+    box-sizing: border-box;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.flex-row > * {
+  flex: 1; /* allow children to grow when space available */
+}
+
+.col-1  { flex-basis:  calc(var(--basis)*1) }
+.col-2  { flex-basis:  calc(var(--basis)*2) }
+.col-3  { flex-basis:  calc(var(--basis)*3) }
+.col-4  { flex-basis:  calc(var(--basis)*4) }
+.col-5  { flex-basis:  calc(var(--basis)*5) }
+.col-6  { flex-basis:  calc(var(--basis)*6) }
+.col-7  { flex-basis:  calc(var(--basis)*7) }
+.col-8  { flex-basis:  calc(var(--basis)*8) }
+.col-9  { flex-basis:  calc(var(--basis)*9) }
+.col-10 { flex-basis:  calc(var(--basis)*10) }
