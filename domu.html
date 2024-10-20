@@ -65,11 +65,16 @@
                 return false;
             });
         }); */
+
+        function loadVideos(){
+            console.log("load");
+            document.getElementById('video-banner').play();
+        }
     </script>
 
 </head>
 
-<body onload="document.getElementById('wrapper').style.opacity='1'">
+<body onload="loadVideos()">
     <nav id="menu-projects">
         <div id="menu-container">
             <div id="nav-line"></div>
@@ -94,7 +99,7 @@
         <section class="project-header">
             <div class="banner">
                 <img class="banner-img-1" src="imgs/domu/dom-im-01.png">
-                <video muted loop autoplay class="banner-img-2" alt="" src="imgs/domu/demo-valen-s.mp4"></video>
+                <video id="video-banner" muted loop preload="metadata" class="banner-img-2" alt="" src="imgs/domu/demo-valen-s.mp4"></video>
             </div>
             <div class="intro flex-row">
                 <div class="project-desc-1 col-4">

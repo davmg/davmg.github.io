@@ -66,11 +66,16 @@
                 return false;
             });
         }); */
+        function loadVideos(){
+            console.log("load");
+            document.getElementById('video-interview').play();
+            document.getElementById('video-tc').play();
+        }
     </script>
 
 </head>
 
-<body onload="document.getElementById('wrapper').style.opacity='1'">
+<body onload="loadVideos()">
     <nav id="menu-projects">
         <div id="menu-container">
             <div id="nav-line"></div>
@@ -193,7 +198,7 @@
         <div class="flex-row project-row">
             <div class="col-7 photo-container-v">
                 <div>
-                    <video autoplay loop muted class="project-photo" alt="" src="imgs/morningstar/mor-im-07.mp4"></video>
+                    <video id="video-interview" preload="metadata" loop muted class="project-photo" alt="" src="imgs/morningstar/mor-im-07.mp4"></video>
                 </div>
                 <div>
                     <img class="project-photo" alt="" src="imgs/morningstar/mor-im-08.png">
@@ -228,7 +233,7 @@
                     <img class="project-photo" alt="" src="imgs/morningstar/mor-im-09.png">
                 </div>
                 <div>
-                    <video autoplay loop muted class="project-photo" alt="" src="imgs/morningstar/mor-im-10.mp4"></video>
+                    <video id="video-tc" preload="none" loop muted class="project-photo" alt="" src="imgs/morningstar/mor-im-10.mp4"></video>
                 </div>
             </div>
         </div>
