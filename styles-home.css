@@ -109,7 +109,7 @@ nav{
 
 @media (max-width: 768px){
     nav{
-        right: 20px;
+        right: 0px;
     }
 }
 
@@ -357,6 +357,8 @@ nav{
 
     #content-academic{
         flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
     }
 
     #content-academic h2{
@@ -364,7 +366,8 @@ nav{
     }
 
     .academia{
-        margin: 0 20px 0 0;
+        margin: 0 0 20px 0;
+        width: 100%;
     }
 }
 @media (max-width: 640px){
@@ -499,16 +502,21 @@ nav{
     left: 0;
 }
 
+.thumb-text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    z-index: 2;
+    width: calc(100% - 44px);
+}
+
 .project-thumb h4{
     font-family: 'Merriweather', serif;
     font-size: 24px;
     font-weight: 900;
     color: var(--black);
-    position: absolute;
-    bottom: 44px;
-    z-index: 2;
-    margin: 0;
-    left: 22px;
 }
 
 .project-thumb p{
@@ -516,11 +524,6 @@ nav{
     font-size: 14px;
     font-weight: normal;
     color: var(--dark-green);
-    position: absolute;
-    bottom: 22px;
-    z-index: 2;
-    margin: 0;
-    left: 22px;
 }
 
 .project-thumb .label-seemore{
@@ -536,8 +539,17 @@ nav{
 }
 
 @media (max-width: 768px){
+    #work{
+        height: auto !important;
+    }
+
+    #content-work{
+        height: auto;
+        max-height: none;
+    }
+
     .project-thumb{
-        height: 25%;
+        height: 200px;
     }
 
     .project-thumb:hover{
@@ -550,6 +562,10 @@ nav{
     .thumb-img{
         -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
         filter: grayscale(0%);
+    }
+
+    .thumb-x{
+        display: none;
     }
 
     .thumb-big, .thumb-small{
