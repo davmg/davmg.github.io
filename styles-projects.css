@@ -78,12 +78,16 @@ body{
 }
 
 @media (max-width: 640px) {
+    #menu-projects{
+        width: 100%;
+        bottom: 0;
+    }
     #menu-container{
         gap: 10px;
     }
 
     .nav-element {
-        padding: 0 4px;
+        padding: 0 6px;
     }
 
     #nav-line {
