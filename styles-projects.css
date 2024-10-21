@@ -126,6 +126,11 @@ body{
     width: 60%;
 }
 
+.project-subtitle{
+    font-size: var(--text-body-size);
+    color: var(--dark-gray);
+}
+
 .square {
     width: 24px;
     height: 24px;
@@ -164,10 +169,6 @@ body{
     align-items: flex-start;
     justify-content: center;
     gap: 4px;
-}
-
-.project-name h4{
-    color: var(--dark-gray);
 }
 
 .secondary-info{
@@ -285,6 +286,11 @@ body{
     border-radius: var(--corner-radius);
 }
 
+@media (max-width: 1010px) {
+    .square{
+        display: none;
+    }
+}
 
 @media (max-width: 768px){
     .banner{
@@ -318,7 +324,6 @@ body{
     }
 
     .title{
-        color: var(--dark-green);
     }
 
     .separator-v{

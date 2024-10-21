@@ -148,8 +148,16 @@ em {
 }
 
 @media (max-width: 640px){
+    :root {
+        /* font sizes */
+        --font-size-xs: 12px;
+        --text-body-size: 14px;
+        --emphasis-size: 16px;
+        --subtitles-size: 22px;
+        --title-size: 30px;
+    }
     .flex-row{
-        max-width: calc(100vw - 20px);
+        max-width: calc(100vw - 80px);
     }
     .col-1  { flex-basis:  calc(var(--basis)*5) !important }
     .col-2  { flex-basis:  calc(var(--basis)*5) !important }
