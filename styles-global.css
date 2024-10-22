@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-    color: var(--dark-green);
+    color: var(--black);
     font-family: var(--serif);
     font-size: var(--subtitles-size);
     font-weight: 900;
@@ -129,6 +129,12 @@ em {
 .col-8  { flex-basis:  calc(var(--basis)*8) }
 .col-9  { flex-basis:  calc(var(--basis)*9) }
 .col-10 { flex-basis:  calc(var(--basis)*10) }
+
+@media (max-width: 1000px){
+    .flex-row{
+        max-width: 768px;
+    }
+}
 
 @media (max-width: 768px){
     .flex-row{

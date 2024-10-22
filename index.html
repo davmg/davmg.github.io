@@ -38,12 +38,13 @@
         function scrollFunction() {
             var scrollPos = window.pageYOffset;
             var height = window.innerHeight;
-            if (scrollPos >= height) {
+            if (scrollPos >= -1) {
                 document.getElementById("menu").style.position = "fixed";
                 if (screen.width > 640) {
                     document.getElementById("menu").style.top = "0px";
                 } else {
-                    document.getElementById("menu").style.top = "calc(100vh - 60px)";
+                    document.getElementById("menu").style.bottom = "0";
+                    document.getElementById("menu").style.top = "auto";
                 }
             } else {
                 document.getElementById("menu").style.position = "absolute";
@@ -154,18 +155,6 @@
 </head>
 
 <body onload="document.body.style.opacity='1'">
-    <header>
-        <div id="mesh-header-container">
-            <img src="imgs/mesh.png" class="mesh-header">
-            <img src="imgs/mesh.png" class="mesh-header">
-            <img src="imgs/mesh.png" class="mesh-header">
-            <img src="imgs/square.png" id="mesh-header-square1" class="mesh-header-square">
-            <img src="imgs/square.png" id="mesh-header-square2" class="mesh-header-square">
-        </div>
-        <a href="#intro" id="logo-header">
-            <img src="imgs/logo.png" alt="logo">
-        </a>
-    </header>
     <nav id="menu">
         <div id="nav-line"></div>
         <a href="#intro" id="nav-d" class="nav-element">
@@ -187,8 +176,12 @@
             <div id="text-highlight">
                 <h2>.david martínez gordillo.</h2>
                 <div class="highlight-borders">
-                    <p>I’m an <em>Interactive Media Designer</em> with experience in UX design, research, creative coding and formal training in service systems design.</p>
-                    <p>Originally from Cali, Colombia, currently in Milan, Italy. I also like watercolor painting, origami, learning new languages and I'm a certified scuba diver.</p>
+                    <p>I'm passionate about <em>tackling complex problems</em> and addressing them with a
+                        <em>human-centered systemic approach.</em></p>
+                    <p>I am an <em>experienced UX designer</em> with formal training in interaction, experience and
+                        service systems design.</p>
+                    <p>Originally from Cali, Colombia, currently in Milan, Italy. I also like watercolor painting,
+                        origami, learning new languages and I'm a certified scuba diver.</p>
                 </div>
             </div>
         </div>
@@ -217,12 +210,12 @@
                     <div class="dot-skill"></div>
                     <h6>interviewing</h6>
                 </div>
-                <div class="skill skill-B">
+                <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
-                    <h6>interaction flows</h6>
+                    <h6>concept generation</h6>
                 </div>
-                <div class="skill skill-C">
+                <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
                     <h6>wireframing</h6>
@@ -232,37 +225,37 @@
                     <div class="dot-skill"></div>
                     <h6>ui style guide</h6>
                 </div>
-                <div class="skill skill-B">
+                <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
                     <h6>experience mapping</h6>
                 </div>
-                <div class="skill skill-C">
+                <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
-                    <h6>brainstorming</h6>
+                    <h6>interaction flows</h6>
                 </div>
                 <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
                     <h6>high-fidelity prototypes</h6>
                 </div>
-                <div class="skill skill-B">
+                <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
-                    <h6>html+css+js</h6>
+                    <h6>ui animation</h6>
                 </div>
                 <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
-                    <h6>personas</h6>
+                    <h6>system thinking</h6>
                 </div>
-                <div class="skill skill-B">
+                <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
                     <h6>use case scenarios</h6>
                 </div>
-                <div class="skill skill-C">
+                <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
                     <h6>testing</h6>
@@ -270,29 +263,38 @@
                 <div class="skill skill-A">
                     <div class="line-skill"></div>
                     <div class="dot-skill"></div>
-                    <h6>ui animation</h6>
+                    <h6>html+css+js</h6>
                 </div>
             </div>
             <!--Close list-->
         </div>
-        <div id="content-academic">
-            <h2>.academic experience.</h2>
+        <div id="content-academic" class="flex-row">
+            <h3 class="col-2">.academic experience.</h3>
+            <div id="academias" class="col-8">
                 <div class="academia">
-                    <a href="https://www.pssd.polimi.it/index.html" target="_blank"><img src="imgs/logo_polimi.png"></a>
-                    <p><em>Product Service System Design</em><br> Master of Science Degree <br>(2023-2025)</p>
+                    <div>
+                        <a href="https://www.pssd.polimi.it/index.html" target="_blank"><img src="imgs/logo_polimi.png"></a>
+                        <p><em>Product Service System Design</em><br> Master of Science Degree <br>(2023-2025)</p>
+                    </div>
                 </div>
                 <div class="academia">
-                    <a href="https://www.icesi.edu.co/facultad-ingenieria/en/interactive-media-design" target="_blank"><img src="imgs/logo_icesi.png"></a>
+                    <a href="https://www.icesi.edu.co/programas/ingenieria-diseno-y-ciencias-aplicadas/diseno-de-medios-interactivos/" target="_blank"><img
+                            src="imgs/logo_icesi.png"></a>
                     <p><em>Interactive Media Design</em><br> Undegraduate Degree <br>(2013-2018)</p>
                 </div>
                 <div class="academia">
-                    <a href="https://www.interaction-design.org/david-martinez" target="_blank"><img src="imgs/logo_idf.png"></a>
+                    <a href="https://www.interaction-design.org/david-martinez" target="_blank"><img
+                            src="imgs/logo_idf.png"></a>
                     <p><em>UX basics, User research, HCI </em><br> Self-paced Courses</p>
                 </div>
+            </div>
         </div> <!--Close academic-->
     </section>
     <!--Close Skills-->
     <section id="work">
+        <div class="flex-row">
+            <h3 class="col-10">.work.</h3>
+        </div>
         <div id="content-work" class="flex-row">
             <a class="project-thumb col-5" href="domu.html">
                 <div id="thumb-domu" class="thumb-img"></div>
