@@ -164,33 +164,45 @@ nav {
     max-width: 500px;
 }
 
-#photo {
-    width: 30%;
-    max-width: 250px;
+#intro-header {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    margin-bottom: 16px;
+    width: 100%;
 }
 
-#intro-header{
-    display: flex;
-    align-items: flex-end;
-    flex-direction: row;
-    gap: 24px;
-    margin-bottom: 16px;
+#photo-container {
+    position: relative;
+    width: 35%;
+    background: linear-gradient(180deg, var(--light-green), #043526);
 }
+
+#photo {
+    width: 70%;
+    max-width: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
 
 #intro-header h2 {
     width: 45%;
+    background-color: var(--bg-green);
+    padding: 24px;
+    padding-right: 70px;
+    flex: 1;
 }
 
 #text-highlight {
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
-.highlight-borders {
-    border-top: solid 1px var(--light-gray);
-    border-bottom: solid 1px var(--light-gray);
-    padding: 12px 0;
-}
+.highlight-borders {}
 
 .highlight-borders p {
     margin: 12px 0px;
@@ -199,10 +211,6 @@ nav {
 
 @media (max-width: 768px) {
 
-    #photo {
-        width: 35%;
-    }
-
     .highlight-borders {
         padding: 12px 0;
     }
@@ -210,8 +218,17 @@ nav {
 
 
 @media (max-width: 640px) {
+    #photo-container {
+        position: relative;
+        width: 45%;
+        background: linear-gradient(180deg, var(--light-green), #043526);
+    }
 
-    #content-intro{
+    #photo {
+        width: 65%;
+    }
+
+    #content-intro {
         width: 75%;
     }
 
