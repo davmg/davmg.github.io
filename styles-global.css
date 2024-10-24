@@ -156,7 +156,7 @@ em {
         --text-body-size: 14px;
         --emphasis-size: 16px;
         --subtitles-size: 22px;
-        --title-size: 30px;
+        --title-size: 28px;
     }
     .flex-row{
         max-width: calc(100vw - 80px);
