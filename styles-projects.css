@@ -12,26 +12,21 @@ body{
     background-color: var(--bg);
     position: fixed;
     bottom: 8px;
-    padding: 4px;
+    padding: 18px 10px;
     left: 50%;
     transform: translate(-50%, 0%);
-    z-index: 4;
-}
-
-#menu-container {
-    border: 1px solid var(--light-gray);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 43px;
+    height: 50px;
     text-align: center;
     font-size: var(--font-size-xs);
     color: var(--light-gray);
     font-family: var(--serif);
-    padding: 14px 6px;
     gap: 20px;
     text-align: center;
+    z-index: 4;
 }
 
 #nav-line {
