@@ -540,7 +540,6 @@ nav {
     }
 
     .project-thumb {
-        height: 250px;
     }
 
     .thumb-gradient {
@@ -551,6 +550,7 @@ nav {
         -webkit-filter: grayscale(0%);
         /* Chrome, Safari, Opera */
         filter: grayscale(0%);
+        opacity: 1;
     }
 
     .thumb-big,
@@ -569,7 +569,6 @@ nav {
     }
 
     .project-thumb {
-        height: 200px;
     }
 }
 
