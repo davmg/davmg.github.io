@@ -72,6 +72,14 @@ h4 {
     margin: 0;
 }
 
+h5 {
+    color: var(--black);
+    font-family: var(--serif);
+    font-size: var(--emphasis-size);
+    font-weight: 900;
+    margin: 0;
+}
+
 p, li {
     font-family: var(--sans-serif);
     color: var(--dark-gray);
