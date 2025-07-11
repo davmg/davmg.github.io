@@ -7,7 +7,7 @@
     --text-body-size: 14px;
     --emphasis-size: 18px;
     --subtitles-size: 26px;
-    --title-size: 32px;
+    --title-size: 28px;
     /* Colors */
     --bg: #f8f8f8;
     --bg-green: #ECF4F2;
@@ -159,7 +159,7 @@ em {
         --title-size: 28px;
     }
     .flex-row{
-        max-width: calc(100vw - 80px);
+        max-width: calc(100vw - 48px);
     }
     .col-1  { flex-basis:  calc(var(--basis)*5) !important }
     .col-2  { flex-basis:  calc(var(--basis)*5) !important }

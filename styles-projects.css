@@ -96,15 +96,15 @@ body{
 
 /* ---------HEADER----------  */
 .project-header {
-    margin-bottom: 144px;
+    margin-bottom: 80px;
 }
 
 .banner {
     position: relative;
-    height: 372px;
     width: 100%;
+    height: auto;
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: -160px;
 }
 
 .banner-img-1,
@@ -113,12 +113,28 @@ body{
     object-fit: cover;
 }
 
-.banner-img-1 {
-    width: 40%;
+.banner-img {
+    width: 100%;
 }
 
 .banner-img-2 {
     width: 60%;
+}
+
+.intro{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 40px 32px;
+}
+
+.logo-project{
+    height: 32px;
 }
 
 .project-subtitle{
@@ -126,26 +142,26 @@ body{
     color: var(--dark-gray);
 }
 
-.square {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    margin: 0 !important;
-    top: 3px;
-    left: -43px;
-}
-
 .separator-v-container{
     display: flex;
     justify-content: center;
+    width: 10%;
 }
 
 .separator-v{
     width: 1px;
-    height: 100%;
+    height: 75%;
     margin: 0 auto;
     position: absolute;
     background-color: var(--light-gray);
+}
+
+.project-desc-1{
+    width: 45%;
+}
+
+.project-desc-2{
+    width: 45%;
 }
 
 .project-desc-1, .project-desc-2{
@@ -282,14 +298,12 @@ body{
 }
 
 @media (max-width: 1010px) {
-    .square{
-        display: none;
-    }
+
 }
 
 @media (max-width: 768px){
     .banner{
-        height: 240px;
+        margin-bottom: 0px;
     }
 
     .l-padding {
@@ -307,7 +321,6 @@ body{
 
 @media (max-width: 640px){
     .banner{
-        height: auto;
         flex-wrap: wrap;
     }
     .banner-img-1{
@@ -318,7 +331,21 @@ body{
         width: 100%;
     }
 
+    .intro{
+        flex-flow: column;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .project-desc-1, .project-desc-2{
+        width: 100%;
+    }
+
     .title{
+    }
+
+    .separator-v-container{
+        width: 100%;
     }
 
     .separator-v{
