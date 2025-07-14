@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="styles-global.css">
     <link rel="stylesheet" type="text/css" href="styles-projects.css">
     <style>
-        :root{
+        :root {
             --dark-green: #009995;
             --bg-green: #E7F6F6;
         }
@@ -71,16 +71,44 @@
             });
         }); */
 
-        function loadVideos(){
+        function loadVideos() {
             console.log("load");
-            document.getElementById('video-banner').play();
+            document.getElementById('video-domu').play();
+        }
+    </script>
+    <script language="javascript">
+        var labelsMini = [".d.", "M*", "Co", "Do", "Mi"];
+        var labelsDefault = [".d.", "Morningstar", "Cosa bolle in pentola", "Domu", "Mimic"];
+
+        window.addEventListener("load", (event) => {
+            defineLabels();
+        });
+        window.addEventListener("resize", (event) => {
+            defineLabels();
+        });
+
+        function defineLabels() {
+            let mainNavLinks = document.querySelectorAll("nav .nav-element");
+            let i = 0;
+            let thisLabel = 3;
+            mainNavLinks.forEach(link => {
+                if (screen.width > 640) {
+                    link.querySelector("p").innerHTML = labelsDefault[i];
+                } else {
+                    link.querySelector("p").innerHTML = labelsMini[i];
+                    console.log("dd");
+                }
+                i++;
+            });
+            mainNavLinks[thisLabel].querySelector("p").innerHTML = labelsDefault[thisLabel];
         }
     </script>
 
 </head>
 
 <body onload="loadVideos()">
-    <nav id="menu-projects">
+    <nav class="menu-container">
+        <div class="menu">
             <div id="nav-line"></div>
             <a href="index.html#work" class="nav-element back">
                 <p>.d.</p>
@@ -97,6 +125,7 @@
             <a href="mimic.html" class="nav-element nav-elem-p">
                 <p>Mi</p>
             </a>
+        </div>
     </nav>
     <div id="wrapper">
         <section class="project-header">
@@ -105,38 +134,41 @@
                 <!-- <video id="video-banner" muted loop preload="metadata" class="banner-img-2" alt="" src="imgs/domu/demo-valen-s.mp4"></video> -->
             </div>
             <div class="intro">
-                <div class="project-desc-1">
-                    <img class="logo-project" src="imgs/domu/dom-logo.png">
-                    <div class="project-name">
-                        <h2 class="title">Long-term pediatric patients experience</h2>
-                        <h4 class="project-subtitle">Capstone project</h4>
-                    </div>
-                    <p>
-                        Digital–physical community for patients to bond with each other and strengthen
-                        psychosocial support processes and development of coping mechanisms.
-                    </p>
-                    <p>2017</p>
-                </div>
-                <div class="separator-v-container">
-                    <div class="separator-v"></div>
-                </div>
-                <div class="project-desc-2">
-                    <div class="highlight">
-                        <h4 class="project-subtitle">Personal Highlight</h4>
-                        <p>I got to empathize with the children and their families. Deeply
-                            understanding their contexts helped me later to explore different ideas. I also tried
-                            multiple research methods adapted to children needs and restrictions in a hospital environment.</p>
-                    </div>
-                    <div class="secondary-info">
-                        <div class="what-i-did">
-                            <h4 class="project-subtitle">What I did</h4>
-                            <p>Design Research, Experience Design, Prototyping, Game Development,
-                                Usability Testing.</p>
+                <img class="logo-project" src="imgs/domu/dom-logo.png">
+                <div class="intro-content">
+                    <div class="project-desc-1">
+                        <div class="project-name">
+                            <h2 class="title">Long-term pediatric patients experience</h2>
+                            <h4 class="project-subtitle">Capstone project</h4>
                         </div>
-                        <div class="tools">
-                            <h4 class="project-subtitle">Tools</h4>
-                            <p>Design Probes (Diary), Interviews, Adobe Illustrator, 3Ds Max, 3D
-                                Printing, Unity.</p>
+                        <p>
+                            Digital–physical community for patients to bond with each other and strengthen
+                            psychosocial support processes and development of coping mechanisms.
+                        </p>
+                        <p>2017</p>
+                    </div>
+                    <div class="separator-v-container">
+                        <div class="separator-v"></div>
+                    </div>
+                    <div class="project-desc-2">
+                        <div class="highlight">
+                            <h4 class="project-subtitle">Personal Highlight</h4>
+                            <p>I got to empathize with the children and their families. Deeply
+                                understanding their contexts helped me later to explore different ideas. I also tried
+                                multiple research methods adapted to children needs and restrictions in a hospital
+                                environment.</p>
+                        </div>
+                        <div class="secondary-info">
+                            <div class="what-i-did">
+                                <h4 class="project-subtitle">What I did</h4>
+                                <p>Design Research, Experience Design, Prototyping, Game Development,
+                                    Usability Testing.</p>
+                            </div>
+                            <div class="tools">
+                                <h4 class="project-subtitle">Tools</h4>
+                                <p>Design Probes (Diary), Interviews, Adobe Illustrator, 3Ds Max, 3D
+                                    Printing, Unity.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -144,13 +176,7 @@
         </section>
 
         <div class="flex-row project-row">
-            <div class="col-3">
-                <img class="project-photo" alt="" src="imgs/domu/dom-im-02.png">
-            </div>
-            <div class="col-4">
-                <img class="project-photo" alt="" src="imgs/domu/dom-im-03.png">
-            </div>
-            <div class="col-3 text-container l-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Background</h3>
                 <p>
                     Children have reduced abilities for the development of <em>coping mechanisms.</em>
@@ -159,48 +185,47 @@
                     Hospitalization is a traumatic experience which can be <em>intervened with technology.</em>
                 </p>
             </div>
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-02.png">
+            </div>
         </div>
 
-        <section class="highlight-section">
-            <div class="flex-row project-row">
-                <div class="col-3 text-container r-padding align-bottom">
-                    <h3 class="subtitle">Research</h3>
-                    <p>
-                        Experience was mapped with a <em>journal made by patients</em> in a pediatric care unit and
-                        interviews to their companions.
-                    </p>
-                    <p>
-                        The intention was to <em>understand their reality</em> inside the hospital, their relationships,
-                        feelings, expectations and perception of themselves.
-                    </p>
-                </div>
-                <div class="col-3">
-                    <img class="project-photo" alt="" src="imgs/domu/dom-im-04.png">
-                </div>
-                <div class="col-4">
-                    <img class="project-photo" alt="" src="imgs/domu/dom-im-05.png">
-                </div>
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding">
+                <h3 class="subtitle">Research</h3>
+                <p>
+                    Experience was mapped with a <em>journal made by patients</em> in a pediatric care unit and
+                    interviews to their companions.
+                </p>
+                <p>
+                    The intention was to <em>understand their reality</em> inside the hospital, their relationships,
+                    feelings, expectations and perception of themselves.
+                </p>
             </div>
-            <div class="flex-row project-row">
-                <div class="col-7">
-                    <img class="project-photo" alt="" src="imgs/domu/dom-im-06.png">
-                </div>
-                <div class="col-3 text-container l-padding align-bottom">
-                    <p>
-                        The experience mapping activities, along with experts interviews and theoretical research, were
-                        analyzed to <em>create a system map.</em>
-                    </p>
-                    <p>
-                        It involves all the parts that take part in the experience and served as starting point to
-                        identify
-                        opportunities.
-                    </p>
-                </div>
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-04.png">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-05.png">
             </div>
-        </section>
+        </div>
+        <div class="flex-row project-row">
+            <div class="col-3 text-container l-padding align-bottom">
+                <p>
+                    The experience mapping activities, along with experts interviews and theoretical research, were
+                    analyzed to <em>create a system map.</em>
+                </p>
+                <p>
+                    It involves all the parts that take part in the experience and served as starting point to
+                    identify
+                    opportunities.
+                </p>
+            </div>
+            <div class="col-7">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-06.png">
+            </div>
+        </div>
 
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Ideation</h3>
                 <p>
                     A general flowchart involving all the parts that intervene in the experience was created. Wireframes
@@ -208,20 +233,9 @@
                     a storyboard helped on visualizing the concept
                 </p>
             </div>
-            <div class="col-3">
+            <div class="col-7 photo-container-v">
                 <img class="project-photo" alt="" src="imgs/domu/dom-im-07.png">
-            </div>
-            <div class="col-4">
                 <img class="project-photo" alt="" src="imgs/domu/dom-im-08.png">
-            </div>
-        </div>
-
-        <div class="flex-row project-row">
-            <div class="col-3">
-                <img class="project-photo" alt="" src="imgs/domu/dom-im-09.png">
-            </div>
-            <div class="col-7">
-                <img class="project-photo" alt="" src="imgs/domu/dom-im-10.png">
             </div>
         </div>
 
@@ -242,37 +256,31 @@
             </div>
         </section>
         <div id="carousel-domu" class="projects-carousel">
+            <img class="imgs-carousel" src="imgs/domu/dom-im-09.png">
+            <img class="imgs-carousel" src="imgs/domu/dom-im-10.png">
             <img class="imgs-carousel" src="imgs/domu/dom-im-11.png">
             <img class="imgs-carousel" src="imgs/domu/dom-im-12.png">
             <img class="imgs-carousel" src="imgs/domu/dom-im-13.png">
-            <img class="imgs-carousel" src="imgs/domu/dom-im-14.png">
         </div>
 
         <div class="flex-row project-row">
-            <div class="col-7 photo-container-v">
-                <img class="project-photo" alt="" src="imgs/domu/dom-im-15.png">
-                <div class="photo-container-h" style="width: 100%;">
-                    <div style="flex: 4;">
-                        <img class="project-photo" alt="" src="imgs/domu/dom-im-16.png">
-                    </div>
-                    <div style="flex: 6;">
-                        <img class="project-photo" alt="" src="imgs/domu/dom-im-17.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 text-container l-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Development</h3>
                 <p>
-                    We planned the <em> interaction of all the elements and actors</em> of the solution system.
+                    The <em> interaction of all the elements and actors</em> of the solution system was planned.
                 </p>
                 <p>
-                    Then coded the digital platforms and prototyped the physical objects using 3D printing.
+                    Then the digital platforms were coded and the physical objects were prototyped using 3D printing.
                 </p>
+            </div>
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-14.png">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-15.png">
             </div>
         </div>
 
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-top">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Testing</h3>
                 <p>
                     Prototypes were introduced in the hospital and tested for 5 days with 2 patients.
@@ -283,8 +291,9 @@
                     recognized the value of the idea in supporting their processes.
                 </p>
             </div>
-            <div class="col-7">
-                <img class="project-photo" alt="" src="imgs/domu/dom-im-18.png">
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/domu/dom-im-16.png">
+                <video id="video-domu" muted loop preload="metadata" src="imgs/domu/demo-valen-s.mp4"></video>
             </div>
         </div>
     </div>

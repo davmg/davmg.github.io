@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="styles-global.css">
     <link rel="stylesheet" type="text/css" href="styles-projects.css">
     <style>
-        :root{
+        :root {
             --dark-green: #654F1D;
             --bg-green: #F2EFE8;
         }
@@ -72,11 +72,39 @@
             });
         }); */
     </script>
+    <script language="javascript">
+        var labelsMini = [".d.", "M*", "Co", "Do", "Mi"];
+        var labelsDefault = [".d.", "Morningstar", "Cosa bolle in pentola", "Domu", "Mimic"];
+
+        window.addEventListener("load", (event) => {
+            defineLabels();
+        });
+        window.addEventListener("resize", (event) => {
+            defineLabels();
+        });
+
+        function defineLabels() {
+            let mainNavLinks = document.querySelectorAll("nav .nav-element");
+            let i = 0;
+            let thisLabel = 2;
+            mainNavLinks.forEach(link => {
+                if (screen.width > 640) {
+                    link.querySelector("p").innerHTML = labelsDefault[i];
+                } else {
+                    link.querySelector("p").innerHTML = labelsMini[i];
+                    console.log("dd");
+                }
+                i++;
+            });
+            mainNavLinks[thisLabel].querySelector("p").innerHTML = labelsDefault[thisLabel];
+        }
+    </script>
 
 </head>
 
 <body onload="document.getElementById('wrapper').style.opacity='1'">
-    <nav id="menu-projects">
+    <nav class="menu-container">
+        <div class="menu">
             <div id="nav-line"></div>
             <a href="index.html#work" class="nav-element back">
                 <p>.d.</p>
@@ -93,6 +121,7 @@
             <a href="mimic.html" class="nav-element nav-elem-p">
                 <p>Mi</p>
             </a>
+        </div>
     </nav>
     <div id="wrapper">
         <section class="project-header">
@@ -100,37 +129,40 @@
                 <img class="banner-img" src="imgs/miscusi/mis-im-01.png">
             </div>
             <div class="intro">
-                <div class="project-desc-1">
-                    <img class="logo-project" src="imgs/miscusi/mis-logo.png">
-                    <div class="project-name">
-                        <h2 class="title">Employee communication and recognition system</h2>
-                    </div>
-                    <p>
-                        A system to help Miscusi store employees to effectively convey their needs and suggestions to
-                        the company, and facilitate the recognition of their invisible efforts.
-                    </p>
-                    <p>Politecnico di Milano + Miscusi, 2024</p>
-                </div>
-                <div class="separator-v-container">
-                    <div class="separator-v"></div>
-                </div>
-                <div class="project-desc-2">
-                    <div class="highlight">
-                        <h4 class="project-subtitle">Personal Highlight</h4>
-                        <p>Being an HR service design project, it was captivating to start from a clear business
-                            objective and then contrasting with a different view from employees. </p>
-                        <p>Co-design sessions were fruitful both for the outcome of the project and my professional
-                            growth. It was also a good opportunity to implement various service design tools and
-                            methods.</p>
-                    </div>
-                    <div class="secondary-info">
-                        <div class="what-i-did">
-                            <h4 class="project-subtitle">What I did</h4>
-                            <p>Research, Co-design, Service Design</p>
+                <img class="logo-project" src="imgs/miscusi/mis-logo.png">
+                <div class="intro-content">
+                    <div class="project-desc-1">
+                        <div class="project-name">
+                            <h2 class="title">Employee communication and recognition system</h2>
                         </div>
-                        <div class="tools">
-                            <h4 class="project-subtitle">Tools</h4>
-                            <p>Interviews, Offering Map, Journey Map, Service Blueprint</p>
+                        <p>
+                            A system to help Miscusi store employees to effectively convey their needs and suggestions
+                            to
+                            the company, and facilitate the recognition of their invisible efforts.
+                        </p>
+                        <p>Politecnico di Milano + Miscusi, 2024</p>
+                    </div>
+                    <div class="separator-v-container">
+                        <div class="separator-v"></div>
+                    </div>
+                    <div class="project-desc-2">
+                        <div class="highlight">
+                            <h4 class="project-subtitle">Personal Highlight</h4>
+                            <p>Being an HR service design project, it was captivating to start from a clear business
+                                objective and then contrasting with a different view from employees. </p>
+                            <p>Co-design sessions were fruitful both for the outcome of the project and my professional
+                                growth. It was also a good opportunity to implement various service design tools and
+                                methods.</p>
+                        </div>
+                        <div class="secondary-info">
+                            <div class="what-i-did">
+                                <h4 class="project-subtitle">What I did</h4>
+                                <p>Research, Co-design, Service Design</p>
+                            </div>
+                            <div class="tools">
+                                <h4 class="project-subtitle">Tools</h4>
+                                <p>Interviews, Offering Map, Journey Map, Service Blueprint</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,51 +170,39 @@
         </section>
 
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Background</h3>
                 <p>
-                    Miscusi is a pasta brand restaurant with several locations in northern Italy.
+                    Miscusi is a pasta restaurant brand with multiple locations across northern Italy.
                 </p>
                 <p>
-                    They face a <em>high turnover rate (64%)</em> among their store staff, despite their efforts in
-                    training, benefits and culture.
+                    Despite investments in training, benefits, and company culture, the store staff faces a <em>high turnover rate (64%)</em>
                 </p>
             </div>
-            <div class="col-7">
+            <div class="col-7 photo-container-v">
                 <img class="project-photo" alt="" src="imgs/miscusi/mis-im-03.png">
             </div>
         </div>
 
         <div class="flex-row project-row">
-            <div class="col-4">
-                <img class="project-photo" alt="" src="imgs/miscusi/mis-im-04.png">
-            </div>
-            <div class="col-3 text-container l-padding align-top">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Research</h3>
                 <p>
-                    We performed an <em>interview with an HR representative</em> to understand how the company is
-                    structured,
-                    what they were doing to face the problem and the objectives they had.
+                    <em>Interviews were conducted</em> with an HR representative and employees to explore their motivations and expectations.
                 </p>
                 <p>
-                    Also, <em>interviews with employees</em> were conducted to find out about their motivations and
-                    expectations about their job.
-                </p>
-            </div>
-            <div class="col-3 text-container l-padding align-top">
-                <h3 class="subtitle" style="opacity: 0;">Research</h3>
-                <p>
-                    There were two main discoveries:
+                   Two main insights emerged:
                 </p>
                 <ul>
-                    <li>There is a high sense of “family” between the stores employees, yet they feel <em>disconnected
-                            from the company</em> itself.</li>
-                    <li><em>Communication is not effective</em> for suggestions, intentions and highlights.</li>
+                    <li>A strong sense of “family” exists among store employees, but they feel <em>disconnected from the company.</em>
+                    <li><em>Communication channels are ineffective</em> for sharing suggestions, intentions, and achievements.</li>
                 </ul>
             </div>
+            <div class="col-7">
+                <img class="project-photo" alt="" src="imgs/miscusi/mis-im-04.png">
+            </div>
         </div>
-
-        <div class="flex-row project-row" style="padding: 48px 0;">
+        <div class="flex-row project-row highlight-section" style="padding: 96px 0;">
             <div class="col-2">
             </div>
             <div class="col-6">
@@ -195,41 +215,37 @@
             </div>
         </div>
 
-        <section class="highlight-section">
-            <div class="flex-row project-row">
-                <div class="col-3">
-                    <img class="project-photo" alt="" src="imgs/miscusi/mis-im-05.png">
-                </div>
-                <div class="col-4">
-                    <img class="project-photo" alt="" src="imgs/miscusi/mis-im-06.png">
-                </div>
-                <div class="col-3 text-container l-padding align-bottom">
-                    <h3 class="subtitle">Co-Design</h3>
-                    <p>
-                        A workshop was planned to <em>bring employees into the design process. </em> The aim was to:
-                    </p>
-                    <ul>
-                        <li>Visualize their journey in the company.</li>
-                        <li>Propose recognition methods.</li>
-                        <li>Prioritize features of the service.</li>
-                    </ul>
-                </div>
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding">
+                <h3 class="subtitle">Co-Design</h3>
+                <p>
+                    A workshop was planned to <em>bring employees into the design process. </em> The aim was to:
+                </p>
+                <ul>
+                    <li>Visualize their journey in the company.</li>
+                    <li>Propose recognition methods.</li>
+                    <li>Prioritize features of the service.</li>
+                </ul>
+                <p>
+                    Feedback and contributions from the employees were included in the concept. It was helpful to
+                    define a new direction of the service.
+                </p>
             </div>
-
-            <div class="flex-row project-row">
-                <div class="col-3 text-container r-padding align-bottom">
-                    <p>
-                        Feedback and contributions from the employees were included in our concept. It was helpful to
-                        define a new direction of the service.
-                    </p>
-                </div>
-                <div class="col-7">
-                    <video autoplay loop muted class="project-photo" alt="" src="imgs/miscusi/mis-im-07.mp4"></video>
-                </div>
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/miscusi/mis-im-05.png">
+                <img class="project-photo" alt="" src="imgs/miscusi/mis-im-06.png">
+                <video autoplay loop muted class="project-photo" alt="" src="imgs/miscusi/mis-im-07.mp4"></video>
             </div>
-        </section>
+        </div>
 
         <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding">
+                <h3 class="subtitle">Service Development</h3>
+                <p>
+                    Starting from the research insights and employees contributions, we defined the key moments that the
+                    service should have to be valuable.
+                </p>
+            </div>
             <div class="col-7 photo-container-v">
                 <div>
                     <img class="project-photo" alt="" src="imgs/miscusi/mis-im-08.png">
@@ -238,17 +254,10 @@
                     <img class="project-photo" alt="" src="imgs/miscusi/mis-im-09.png">
                 </div>
             </div>
-            <div class="col-3 text-container l-padding align-bottom">
-                <h3 class="subtitle">Service Development</h3>
-                <p>
-                    Starting from the research insights and employees contributions, we defined the key moments that the
-                    service should have to be valuable.
-                </p>
-            </div>
         </div>
 
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-top">
+            <div class="col-3 text-container r-padding">
                 <p>
                     Then the service was further developed by detailing all of its <em> main components and the
                         interactions between them.</em>
@@ -277,7 +286,8 @@
                 </div>
                 <div class="col-6">
                     <p class="emphasis-large">
-                        A system to help Miscusi store employees to <em> effectively convey their needs and suggestions</em> to
+                        A system to help Miscusi store employees to <em> effectively convey their needs and
+                            suggestions</em> to
                         the company, and facilitate the <em>recognition of their invisible efforts.</em>
                     </p>
                 </div>
@@ -286,12 +296,8 @@
             </div>
         </section>
         <div id="video-miscusi" class="flex-row">
-            <div class="col-1">
-            </div>
-            <div class="col-8">
+            <div class="col-10">
                 <video controls src="imgs/miscusi/mis-vid.mp4" poster="imgs/miscusi/mis-video-poster.png"></video>
-            </div>
-            <div class="col-1">
             </div>
         </div>
 

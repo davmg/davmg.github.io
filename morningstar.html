@@ -72,16 +72,45 @@
             });
         }); */
         function loadVideos(){
-            console.log("load");
+            //console.log("load");
             document.getElementById('video-interview').play();
             document.getElementById('video-tc').play();
         }
     </script>
+    <script language="javascript">
+        var labelsMini = [".d.", "M*", "Co", "Do", "Mi"];
+        var labelsDefault = [".d.", "Morningstar", "Cosa bolle in pentola", "Domu", "Mimic"];
+
+        window.addEventListener("load", (event) => {
+            defineLabels();
+        });
+        window.addEventListener("resize", (event) => {
+            defineLabels();
+        });
+
+        function defineLabels() {
+            let mainNavLinks = document.querySelectorAll("nav .nav-element");
+            let i = 0;
+            let thisLabel = 1;
+            mainNavLinks.forEach(link => {
+                if (screen.width > 640) {
+                    link.querySelector("p").innerHTML = labelsDefault[i];
+                } else {
+                    link.querySelector("p").innerHTML = labelsMini[i];
+                    console.log("dd");
+                }
+                i++;
+            });
+            mainNavLinks[thisLabel].querySelector("p").innerHTML = labelsDefault[thisLabel];
+        }
+    </script>
+
 
 </head>
 
 <body onload="loadVideos()">
-    <nav id="menu-projects">
+    <nav class="menu-container">
+        <div class="menu">
             <div id="nav-line"></div>
             <a href="index.html#work" class="nav-element back">
                 <p>.d.</p>
@@ -98,6 +127,7 @@
             <a href="mimic.html" class="nav-element nav-elem-p">
                 <p>Mi</p>
             </a>
+        </div>
     </nav>
     <div id="wrapper">
         <section class="project-header">
@@ -105,44 +135,45 @@
                 <img class="banner-img" src="imgs/morningstar/mor-im-01.png">
             </div>
             <div class="intro">
-                <div class="project-desc-1">
-                    <img class="logo-project" src="imgs/morningstar/mor-logo.png">
-                    <div class="project-name">
-                        <h2 class="title">Proposal Tracking & Money Movement</h2>
-                        <h4 class="project-subtitle">Morningstar’s financial advisors asset management platform (TAMP)</h4>
-                    </div>
-                    <p>
-                        Web application where advisors are able to start, track and maintain their clients investments.
-                    </p>
-                    <p>© Morningstar, 2024</p>
-                </div>
-                <div class="separator-v-container">
-                    <div class="separator-v"></div>
-                </div>
-                <div class="project-desc-2">
-                    <div class="highlight">
-                        <h4 class="project-subtitle">Personal Highlight</h4>
-                        <p>It was fulfilling to see how the product evolved from being paper-based to digital workflows,
-                            making users work in a more efficient and reliable way.</p>
-                        <p>I was part of that evolution by mediating between stakeholders and compiling all necessities
-                            in a single product-service offering.</p>
-                    </div>
-                    <div class="secondary-info">
-                        <div class="what-i-did">
-                            <h4 class="project-subtitle">What I did</h4>
-                            <p>Discovery, Information architecture, User research, Interface design</p>
+                <img class="logo-project" src="imgs/morningstar/mor-logo.png">
+                <div class="intro-content">
+                    <div class="project-desc-1">
+                        <div class="project-name">
+                            <h2 class="title">Proposal Tracking & Money Movement</h2>
+                            <h4 class="project-subtitle">Morningstar’s financial advisors asset management platform (TAMP)</h4>
                         </div>
-                        <div class="tools">
-                            <h4 class="project-subtitle">Tools</h4>
-                            <p>Interviews, Interaction Flows, Figma, HeyMarvin.</p>
+                        <p>
+                            Web application where advisors are able to start, track and maintain their clients investments.
+                        </p>
+                        <p>© Morningstar, 2024</p>
+                    </div>
+                    <div class="separator-v-container">
+                        <div class="separator-v"></div>
+                    </div>
+                    <div class="project-desc-2">
+                        <div class="highlight">
+                            <h4 class="project-subtitle">Personal Highlight</h4>
+                            <p>It was fulfilling to see how the product evolved from being paper-based to digital workflows,
+                                making users work in a more efficient and reliable way.</p>
+                            <p>I was part of that evolution by mediating between stakeholders and compiling all necessities
+                                in a single product-service offering.</p>
+                        </div>
+                        <div class="secondary-info">
+                            <div class="what-i-did">
+                                <h4 class="project-subtitle">What I did</h4>
+                                <p>Discovery, Information architecture, User research, Interface design</p>
+                            </div>
+                            <div class="tools">
+                                <h4 class="project-subtitle">Tools</h4>
+                                <p>Interviews, Interaction Flows, Figma, HeyMarvin.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Discovery</h3>
                 <p>
                     I participated in ongoing <em>feedback gathering </em>methods such as surveys and Customer Success
@@ -152,61 +183,49 @@
                     Also, I got to <em>audit existing features and propose improvements</em> to the platform.
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-7 photo-container-v">
                 <img class="project-photo" alt="" src="imgs/morningstar/mor-im-03.png">
-            </div>
-            <div class="col-3">
-                <img class="project-photo" alt="" src="imgs/morningstar/mor-im-04.png">
             </div>
         </div>
 
-        <section class="highlight-section">
-            <div class="flex-row project-row">
-                <div class="col-7">
-                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-05.png">
-                </div>
-                <div class="col-3 text-container l-padding align-bottom">
-                    <h3 class="subtitle">Mapping</h3>
-                    <p>
-                        I mapped the system flows involved, including the <em>interaction with internal and external
-                            stakeholders.</em>
-                    </p>
-                    <p>
-                        Improvement opportunities were identified and analyzed with <em>product and technology
-                            teams.</em>
-                    </p>
-                </div>
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding">
+                <h3 class="subtitle">Mapping</h3>
+                <p>
+                    I mapped the system flows involved, including the <em>interaction with internal and external
+                        stakeholders.</em>
+                </p>
+                <p>
+                    Improvement opportunities were identified and analyzed with <em>product and technology
+                    teams.</em>
+                </p>
             </div>
-            <div class="flex-row project-row">
-                <div class="col-3 text-container r-padding align-top">
-                    <h3 class="subtitle">Ideation</h3>
-                    <p>
-                        New features or tools were proposed via <em>task flows and low-fidelity prototypes.</em>
-                    </p>
-                    <p>
-                        These were later reviewed with internal stakeholders to validate <em>impact and
-                            feasibility.</em>
-                    </p>
-                    <p>
-                        I acted as intermediary of different areas by envisioning the solutions as a whole.
-                    </p>
-                </div>
-                <div class="col-7">
-                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-06.png">
-                </div>
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/morningstar/mor-im-04.png">
+                <img class="project-photo" alt="" src="imgs/morningstar/mor-im-05.png">
             </div>
-        </section>
+        </div>
+        <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding">
+                <h3 class="subtitle">Ideation</h3>
+                <p>
+                    New features or tools were proposed via <em>task flows and low-fidelity prototypes.</em>
+                </p>
+                <p>
+                    These were later reviewed with internal stakeholders to validate <em>impact and
+                        feasibility.</em>
+                </p>
+                <p>
+                    I acted as intermediary of different areas by envisioning the solutions as a whole.
+                </p>
+            </div>
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/morningstar/mor-im-06.png">
+            </div>
+        </div>
 
         <div class="flex-row project-row">
-            <div class="col-7 photo-container-v">
-                <div>
-                    <video id="video-interview" preload="metadata" loop muted class="project-photo" alt="" src="imgs/morningstar/mor-im-07.mp4"></video>
-                </div>
-                <div>
-                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-08.png">
-                </div>
-            </div>
-            <div class="col-3 text-container l-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Testing</h3>
                 <p>
                     Proposals were tested with financial advisors through moderated <em>usability testing.</em>
@@ -216,10 +235,17 @@
                     find motivation to use the solutions or not.
                 </p>
             </div>
+            <div class="col-7 photo-container-v">
+                <div>
+                    <video id="video-interview" preload="metadata" loop muted class="project-photo" alt=""
+                        src="imgs/morningstar/mor-im-07.mp4"></video>
+                    <img class="project-photo" alt="" src="imgs/morningstar/mor-im-08.png">
+                </div>
+            </div>
         </div>
 
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-top">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Implementation</h3>
                 <p>
                     The final stage was to produce <em>interface designs</em> that were delivered to the development

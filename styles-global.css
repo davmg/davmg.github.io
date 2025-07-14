@@ -6,7 +6,7 @@
     --font-size-xs: 12px;
     --text-body-size: 14px;
     --emphasis-size: 18px;
-    --subtitles-size: 26px;
+    --subtitles-size: 22px;
     --title-size: 28px;
     /* Colors */
     --bg: #f8f8f8;
@@ -33,7 +33,7 @@
 }
 
 ::selection {
-    background-color: var(--light-green);
+    background-color: var(--dark-green);
     color: white;
 }
 
@@ -103,6 +103,92 @@ em {
     margin: 0;
 }
 
+/* NAV */
+.menu-container{
+    position: fixed;
+    bottom: 8px;
+    left: 50%;
+    max-width: 100%;
+    transform: translate(-50%, 0%);
+    padding: 4px;
+    height: 50px;
+    background-color: var(--bg);
+    z-index: 4;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    font-size: var(--font-size-xs);
+    color: var(--light-gray);
+    font-family: var(--serif);
+    border: solid 1px var(--light-gray);
+}
+
+.nav-element {
+    font-family: var(--serif);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0 24px;
+    text-align: center;
+    background-color: var(--bg);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-element p {
+    color: var(--light-gray);
+    font-family: var(--serif);
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.nav-main-selected p {
+    color: var(--dark-green);
+}
+
+.nav-selected p {
+    color: var(--dark-green);
+}
+#nav-line {
+    height: 1px;
+    width: 90%;
+    position: absolute;
+    background-color: var(--light-gray);
+    z-index: -2;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        gap: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container{
+        width: 100%;
+        bottom: 0;
+    }
+    .menu{
+        width: 100%;
+        padding: 0 16px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-element {
+        padding: 0 6px;
+    }
+}
+
 /*10 COLUMNS*/
 
 *{
@@ -113,7 +199,8 @@ em {
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
-    max-width: 900px;
+    max-width: 1000px;
+    padding: 40px 48px;
     margin: 0 auto;
     position: relative;
     width: 100%;
@@ -136,7 +223,7 @@ em {
 
 @media (max-width: 1000px){
     .flex-row{
-        max-width: 678px;
+        max-width: 776px;
     }
 }
 
@@ -166,8 +253,34 @@ em {
         --subtitles-size: 22px;
         --title-size: 28px;
     }
+
     .flex-row{
-        max-width: calc(100vw - 48px);
+        padding: 40px 24px;
+    }
+    .col-1  { flex-basis:  calc(var(--basis)*5) !important }
+    .col-2  { flex-basis:  calc(var(--basis)*5) !important }
+    .col-3  { flex-basis:  calc(var(--basis)*5) !important }
+    .col-4  { flex-basis:  calc(var(--basis)*5) !important }
+    .col-5  { flex-basis:  calc(var(--basis)*5) !important }
+    .col-6  { flex-basis:  calc(var(--basis)*10) !important }
+    .col-7  { flex-basis:  calc(var(--basis)*10) !important }
+    .col-8  { flex-basis:  calc(var(--basis)*10) !important }
+    .col-9  { flex-basis:  calc(var(--basis)*10) !important }
+    .col-10 { flex-basis:  calc(var(--basis)*10) !important }
+}
+
+@media (max-width: 425px){
+    :root {
+        /* font sizes */
+        --font-size-xs: 12px;
+        --text-body-size: 14px;
+        --emphasis-size: 16px;
+        --subtitles-size: 22px;
+        --title-size: 28px;
+    }
+
+    .flex-row{
+        padding: 40px 24px;
     }
     .col-1  { flex-basis:  calc(var(--basis)*5) !important }
     .col-2  { flex-basis:  calc(var(--basis)*5) !important }

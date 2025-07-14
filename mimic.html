@@ -54,7 +54,6 @@
     </script>
 
     <script language="javascript">
-
         /* $(function () {
             //Fade out
             $('nav').find('.nav-element').click(function (e) {
@@ -66,11 +65,39 @@
             });
         }); */
     </script>
+    <script language="javascript">
+        var labelsMini = [".d.", "M*", "Co", "Do", "Mi"];
+        var labelsDefault = [".d.", "Morningstar", "Cosa bolle in pentola", "Domu", "Mimic"];
+
+        window.addEventListener("load", (event) => {
+            defineLabels();
+        });
+        window.addEventListener("resize", (event) => {
+            defineLabels();
+        });
+
+        function defineLabels() {
+            let mainNavLinks = document.querySelectorAll("nav .nav-element");
+            let i = 0;
+            let thisLabel = 4;
+            mainNavLinks.forEach(link => {
+                if (screen.width > 640) {
+                    link.querySelector("p").innerHTML = labelsDefault[i];
+                } else {
+                    link.querySelector("p").innerHTML = labelsMini[i];
+                    console.log("dd");
+                }
+                i++;
+            });
+            mainNavLinks[thisLabel].querySelector("p").innerHTML = labelsDefault[thisLabel];
+        }
+    </script>
 
 </head>
 
 <body onload="document.getElementById('wrapper').style.opacity='1'">
-    <nav id="menu-projects">
+   <nav class="menu-container">
+        <div class="menu">
             <div id="nav-line"></div>
             <a href="index.html#work" class="nav-element back">
                 <p>.d.</p>
@@ -87,6 +114,7 @@
             <a href="mimic.html" class="nav-element nav-elem-p nav-selected">
                 <p>Mimic</p>
             </a>
+        </div>
     </nav>
     <div id="wrapper">
         <section class="project-header">
@@ -95,35 +123,37 @@
                 <!-- <img class="banner-img-2" alt="" src="imgs/mimic/mim-im-02.png"> -->
             </div>
             <div class="intro">
-                <div class="project-desc-1">
-                    <img class="logo-project" src="imgs/mimic/mim-logo.png">
-                    <div class="project-name">
-                        <h2 class="title">Salespeople training app</h2>
-                    </div>
-                    <p>
-                        Vehicle training mobile app for automobile salespeople to better close deals. Mimic encourages
-                        users to “imitate” or reproduce the information and skills presented in the platform.
-                    </p>
-                    <p>© Squareball Studios, 2019</p>
-                </div>
-                <div class="separator-v-container">
-                    <div class="separator-v"></div>
-                </div>
-                <div class="project-desc-2">
-                    <div class="highlight">
-                        <h4 class="project-subtitle">Personal Highlight</h4>
-                        <p>Managed to interact with multiple stakeholders and to gather requirements from a complex
-                            context.</p>
-                        <p>I designed a complete UI library that worked to maintain consistency across teams.</p>
-                    </div>
-                    <div class="secondary-info">
-                        <div class="what-i-did">
-                            <h4 class="project-subtitle">What I did</h4>
-                            <p>Requirement analysis, Interaction design, Prototyping, UI design & animation</p>
+                <img class="logo-project" src="imgs/mimic/mim-logo.png">
+                <div class="intro-content">
+                    <div class="project-desc-1">
+                        <div class="project-name">
+                            <h2 class="title">Salespeople training app</h2>
                         </div>
-                        <div class="tools">
-                            <h4 class="project-subtitle">Tools</h4>
-                            <p>Interviews, Interaction Flow, Use case scenarios, Figma.</p>
+                        <p>
+                            Vehicle training mobile app for automobile salespeople to better close deals. Mimic encourages
+                            users to “imitate” or reproduce the information and skills presented in the platform.
+                        </p>
+                        <p>© Squareball Studios, 2019</p>
+                    </div>
+                    <div class="separator-v-container">
+                        <div class="separator-v"></div>
+                    </div>
+                    <div class="project-desc-2">
+                        <div class="highlight">
+                            <h4 class="project-subtitle">Personal Highlight</h4>
+                            <p>Managed to interact with multiple stakeholders and to gather requirements from a complex
+                                context.</p>
+                            <p>I designed a complete UI library that worked to maintain consistency across teams.</p>
+                        </div>
+                        <div class="secondary-info">
+                            <div class="what-i-did">
+                                <h4 class="project-subtitle">What I did</h4>
+                                <p>Requirement analysis, Interaction design, Prototyping, UI design & animation</p>
+                            </div>
+                            <div class="tools">
+                                <h4 class="project-subtitle">Tools</h4>
+                                <p>Interviews, Interaction Flow, Use case scenarios, Figma.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,42 +161,44 @@
         </section>
 
         <div class="flex-row project-row">
-            <div class="col-3">
-                <img class="project-photo" alt="" src="imgs/mimic/mim-im-03.png">
-            </div>
-            <div class="col-4">
-                <img class="project-photo" alt="" src="imgs/mimic/mim-im-04.png">
-            </div>
-            <div class="col-3 text-container l-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Background</h3>
                 <p>
                     Salespeople in automotive industry need to <em>keep track of a large amount of information</em> and
                     to better close deals.
                 </p>
             </div>
+            <div class="col-7 photo-container-v">
+                <img class="project-photo" alt="" src="imgs/mimic/mim-im-04.png">
+            </div>
         </div>
 
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-bottom">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Understanding</h3>
                 <p>
-                    The client was a major automotive dealership chain, who had identified that <em>information is not
-                        effectively distributed </em>to salespeople.
+                    A major automotive dealership chain faced challenges distributing sales content effectively to its team, despite the wealth of valuable materials they have collected.
                 </p>
                 <p>
-                    They had gathered relevant content about sales skills and cars and needed a way to reach the sales
-                    force.
-                </p>
-                <p>
-                    Early-stage process included experience understanding and <em>mapping of all the parties
-                        involved.</em>
+                    The early process focused on<em> understanding the user experience and mapping all stakeholders involved.</em>
                 </p>
             </div>
             <div class="col-7">
                 <img class="project-photo" alt="" src="imgs/mimic/mim-im-05.png">
             </div>
         </div>
+
         <div class="flex-row project-row">
+            <div class="col-3 text-container r-padding">
+                <h3 class="subtitle">Ideation</h3>
+                <p>
+                    <em> Low-fi prototypes</em> were made in order to present to stakeholders.
+                </p>
+                <p>
+                    It involves all the parts that take part in the experience and served as starting point to
+                    identify opportunities.
+                </p>
+            </div>
             <div class="col-7 photo-container-v">
                 <div>
                     <img class="project-photo" alt="" src="imgs/mimic/mim-im-06.png">
@@ -175,21 +207,10 @@
                     <img class="project-photo" alt="" src="imgs/mimic/mim-im-07.png">
                 </div>
             </div>
-            <div class="col-3 text-container l-padding align-top">
-                <h3 class="subtitle">Ideation</h3>
-                <p>
-                    <em> Low-fi prototypes</em> were made in order to present to stakeholders.
-                </p>
-                <p>
-                    It involves all the parts that take part in the experience and served as starting point to
-                    identify
-                    opportunities.
-                </p>
-            </div>
         </div>
 
         <div class="flex-row project-row">
-            <div class="col-3 text-container r-padding align-top">
+            <div class="col-3 text-container r-padding">
                 <h3 class="subtitle">Interface Design</h3>
                 <p>
                     A complete hi-fidelity prototype was delivered for development.
