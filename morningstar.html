@@ -82,22 +82,21 @@
         var labelsDefault = [".d.", "Morningstar", "Cosa bolle in pentola", "Domu", "Mimic"];
 
         window.addEventListener("load", (event) => {
-            defineLabels();
+            defineLabels(window.innerWidth);
         });
         window.addEventListener("resize", (event) => {
-            defineLabels();
+            defineLabels(window.innerWidth);
         });
 
-        function defineLabels() {
+        function defineLabels(windowWidth) {
             let mainNavLinks = document.querySelectorAll("nav .nav-element");
             let i = 0;
             let thisLabel = 1;
             mainNavLinks.forEach(link => {
-                if (screen.width > 640) {
+                if (windowWidth > 640) {
                     link.querySelector("p").innerHTML = labelsDefault[i];
                 } else {
                     link.querySelector("p").innerHTML = labelsMini[i];
-                    console.log("dd");
                 }
                 i++;
             });

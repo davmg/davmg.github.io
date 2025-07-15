@@ -146,10 +146,12 @@
             //Fade out
             $('#work').find('.project-thumb').click(function (e) {
                 link_href = this.href;
-                $('body').fadeOut(300, function () {
-                    window.location.href = link_href;
-                });
-                return false;
+                if(!link_href.hasClass("coming-soon") ){
+                    $('body').fadeOut(300, function () {
+                        window.location.href = link_href;
+                    });
+                    return false;
+                }
             });
         });
     </script>
@@ -303,34 +305,44 @@
     <section id="work">
         <div id="content-work" class="flex-row">
             <h3 class="col-10">.work.</h3>
-            <a class="project-thumb col-5" href="morningstar.html">
+            <a class="project-thumb thumb-l col-5" href="morningstar.html">
                 <img class="thumb-img" src="imgs/tmb_mor.png">
                 <div class="thumb-text">
                     <h5>Morningstar TAMP</h5>
                     <p>Financial advisors asset management platform</p>
                 </div>
             </a>
-            <a class="project-thumb col-5" href="miscusi.html">
+            <a class="project-thumb thumb-l col-5" href="miscusi.html">
                 <img class="thumb-img" src="imgs/tmb_mis.png">
                 <div class="thumb-text">
                     <h5>Cosa Bolle in Pentola</h5>
                     <p>Employee communication and recognition system</p>
                 </div>
             </a>
-            <a class="project-thumb col-5" href="domu.html">
+            <a class="project-thumb thumb-s col-4" href="domu.html">
                 <img class="thumb-img" src="imgs/tmb_domu.png">
                 <div class="thumb-text">
                     <h5>Domu</h5>
                     <p>Pediatric hospitalization experience</p>
                 </div>
             </a>
-            <a class="project-thumb col-5" href="mimic.html">
+            <a class="project-thumb thumb-s col-3" href="mimic.html">
                 <img class="thumb-img" src="imgs/tmb_mim.png">
                 <div class="thumb-text">
                     <h5>Mimic</h5>
                     <p>Sales people training</p>
                 </div>
             </a>
+            <div class="project-thumb thumb-s coming-soon col-3">
+                <img class="thumb-img" src="imgs/tmb_qcpr.png">
+                <div class="coming-soon-label">
+                    <em>Work in progress</em>
+                </div>
+                <div class="thumb-text">
+                    <h5>Laerdal Medical</h5>
+                    <p>CPR training app onboarding</p>
+                </div>
+            </div>
         </div>
     </section>
     <section id="contact">
