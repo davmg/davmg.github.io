@@ -445,13 +445,13 @@ header {
 
 .coming-soon-label {
     position: absolute;
-    top: 0;
+    top: 80px;
     width: 100%;
     padding: 8px;
     text-align: center;
     background-color: white;
     color: var(--dark-gray);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 @media (max-width: 1000px) {
